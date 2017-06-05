@@ -1,0 +1,936 @@
+@charset "utf-8";
+
+/*
+ ************************************************************************************************************************************
+ * =RESET
+ ************************************************************************************************************************************
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {outline: none;}
+
+/*
+ ************************************************************************************************************************************
+ * =font-face
+ ************************************************************************************************************************************
+*/
+
+@font-face {
+    font-family: 'FuturaStd-Bold';
+    src: url('../webfont/FuturaStd-Bold.eot');
+    src: url('../webfont/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/FuturaStd-Bold.svg#FuturaStd-Bold') format('svg'),
+         url('../webfont/FuturaStd-Bold.ttf') format('truetype'),
+         url('../webfont/FuturaStd-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'FuturaStd-Book';
+    src: url('../webfont/FuturaStd-Book.eot');
+    src: url('../webfont/FuturaStd-Book.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/FuturaStd-Book.svg#FuturaStd-Book') format('svg'),
+         url('../webfont/FuturaStd-Book.ttf') format('truetype'),
+         url('../webfont/FuturaStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'FuturaStd-Heavy';
+    src: url('../webfont/FuturaStd-Heavy.eot');
+    src: url('../webfont/FuturaStd-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/FuturaStd-Heavy.svg#FuturaStd-Heavy') format('svg'),
+         url('../webfont/FuturaStd-Heavy.ttf') format('truetype'),
+         url('../webfont/FuturaStd-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'FuturaStd-Light';
+    src: url('../webfont/FuturaStd-Light.eot');
+    src: url('../webfont/FuturaStd-Light.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/FuturaStd-Light.svg#FuturaStd-Light') format('svg'),
+         url('../webfont/FuturaStd-Light.ttf') format('truetype'),
+         url('../webfont/FuturaStd-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'FuturaStd-Medium';
+    src: url('../webfont/FuturaStd-Medium.eot');
+    src: url('../webfont/FuturaStd-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../webfont/FuturaStd-Medium.svg#FuturaStd-Medium') format('svg'),
+         url('../webfont/FuturaStd-Medium.ttf') format('truetype'),
+         url('../webfont/FuturaStd-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@imports
+ ************************************************************************************************************************************
+*/
+
+@import "plugins/lesshat.less";
+@import "plugins/animate.less";
+
+
+/*
+ ************************************************************************************************************************************
+ * =Variáveis e Mixins
+ ************************************************************************************************************************************
+*/
+
+.futura-light {font-family: 'FuturaStd-Light';}
+.futura-medium {font-family: 'FuturaStd-Medium';}
+.futura-book {font-family: 'FuturaStd-Book';}
+.futura-bold {font-family: 'FuturaStd-Bold';}
+.futura-heavy {font-family: 'FuturaStd-Heavy';}
+
+
+@preto : #000;
+@branco : #fff;
+@cinza : #7e7e7e;
+@azul : #07a1c3;
+@azul-escuro : #001f4c;
+@verde : #c6ff00;
+
+.left {float: left;}
+.right {float: right;}
+.spt {overflow: hidden; text-indent: -5000px;}
+.transition {.transition(all 0.3s);}
+.upper {text-transform: uppercase;}
+
+
+/*
+ ************************************************************************************************************************************
+ * =Common
+ ************************************************************************************************************************************
+*/
+
+body {.futura-medium; letter-spacing: 0.5;}
+
+.barra-landing {.box-shadow(0px 5px 5px 0px rgba(0,0,0,0.5));}
+
+section {
+    width: 100%;
+    .left;
+    position: relative;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    .box-sizing(border-box);
+    
+    .container {
+        width: 100%;
+        max-width: 1024px;
+        .box-sizing(border-box);
+        margin: 0 auto;
+
+        h2 {
+            .box-sizing(border-box);
+            border: 3px solid;
+            font-size: 30px;
+            .futura-bold;
+            .upper;
+            padding: 5px 40px;
+            .left;
+            clear: both;
+            margin-bottom: 37px;
+
+        }// h2
+
+    }// .container
+
+}// section
+
+#video {
+    height: 819px;
+    background-image: url(../img/bg-video.jpg);
+    .background-size(cover);
+    margin-top: 60px;
+    
+    #videoPrincipal {display: none;}
+
+    .container {
+        padding-top: 135px;
+        
+        .tecnologia {
+            width: 830px;
+            margin: 0 auto;
+            text-align: center;
+
+            h1 {
+                font-size: 72px;
+                .upper;
+                color: @verde;
+                .futura-bold;
+                line-height: 120%;
+                position: relative;
+                display: inline-block;
+                margin-bottom: 70px;
+
+                &:after {
+                    content: '';
+                    width: 260px;
+                    height: 12px;
+                    background-color: @verde;
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -24px;
+                    left: 50%;
+                    .translateX(-50%);
+
+                }// :after
+
+            }// h1
+
+            .btn-play {
+                .size(80);
+                text-indent: -5000px;
+                overflow: hidden;
+                background: url(../img/icons/play.png) 0 0 no-repeat;
+                display: inline-block;
+                margin-bottom: 52px;
+                .border-radius(50%);
+                .transition;
+
+                &:hover {
+                    .box-shadow(0px 5px 5px 0px rgba(0,0,0,0.5));
+                    .transition;
+                }
+            
+            }// .btn-play
+
+            p {
+                width: 100%;
+                .left;
+                font-size: 22px;
+                color: @branco;
+                .futura-light;
+                text-align: center;
+                margin-bottom: 34px;
+
+                span {color: @verde;}
+
+            }// p
+
+            .criatividade-tecnologia {
+                width: 457px;
+                height: 92px;
+                display: inline-block;
+                background: url(../img/txt-criatividade-tecnologia.png) 0 0 no-repeat;
+                text-indent: -5000px;
+                overflow: hidden;
+                float: none;
+            }
+
+        }// .tecnologia
+
+    }// .container
+
+}// #video
+
+#cursos {
+    height: 643px;
+    background-image: url(../img/bg-cursos.jpg);
+    background-position: center 85px;
+    padding-top: 77px;
+
+    .container {
+        
+        h2 {border-color: @azul-escuro; color: @azul-escuro;}
+
+        p {
+            width: 450px;
+            .left;
+            clear: both;
+            font-size: 18px;
+            .futura-book;
+            letter-spacing: 1px;
+            color: @azul-escuro;
+            line-height: 130%;
+            margin-bottom: 37px;
+
+        }// p
+
+        ul {
+            width: 100%;
+            .left;
+            
+            li {
+                width: 522px;
+                height: 82px;
+                .box-sizing(border-box);
+                position: relative;
+                margin-bottom: 10px;
+                cursor: pointer;
+                padding: 19px 105px 0;
+                font-size: 18px;
+                .futura-bold;
+                .upper;
+                background-color: #e6e6e6;
+                line-height: 120%;
+                color: @azul;
+                .transition;
+
+                span {
+                    .size(82);
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #989898;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    .transition;
+
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 5.5px 0 5.5px 6px;
+                        border-color: transparent transparent transparent #989898;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -3px;
+                        right: -6px;
+                        .transition;
+                    }
+
+                }// span
+
+                &:after {
+                    content: '';
+                    display: block;
+                    .size(82);
+                    border-left: 1px solid @branco;
+                    background: #ededed url(../img/icons/plus.png) center center no-repeat;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                
+                }// :after
+
+                &.analise-desenvolvimento {span {background-image: url(../img/icons/gog.png);}}
+                &.tecnologia-jogos {span {background-image: url(../img/icons/joystick.png);}}
+                &.gestao-tecnologia {span {background-image: url(../img/icons/monitor.png);}}
+                
+                &:hover {
+                    color: @azul-escuro;
+                    .transition;
+
+                    span {
+                        background-color: @azul;
+                        .transition;
+
+                        &:after {border-color: transparent transparent transparent @azul; .transition}
+
+                    }// span
+
+                }// :hover
+
+            }// li
+
+        }// ul
+
+    }// .container
+
+}// #cursos
+
+#desafios {
+    height: 1486px;
+    background-image: url(../img/bg-desafios.jpg);
+    .background-size(100%);
+    padding-top: 77px;
+
+    .container {
+        
+        h2 {border-color: @verde; color: @verde;}
+
+        > p {
+            width: 450px;
+            .left;
+            clear: both;
+            font-size: 18px;
+            .futura-book;
+            letter-spacing: 1px;
+            color: @branco;
+            line-height: 130%;
+            margin-bottom: 77px;
+
+        }// p
+
+        ul {
+            width: 100%;
+            .left;
+            margin-bottom: 115px;
+
+            li {
+
+                .calc(width, ~'25% - 52px');
+                margin-right: 52px;
+                .left;
+                text-align: center;
+                cursor: pointer;
+
+                &:last-child {margin-right: 0;}
+
+                figure {
+                    width: 100%;
+                    max-width: 195px;
+                    max-height: 195px;
+                    .box-sizing(border-box);
+                    display: inline-block;
+                    .border-radius(50%);
+                    border: 4px solid @verde;
+                    overflow: hidden;
+                    margin-bottom: 25px;
+                    .transition;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 195px;
+                        max-height: 195px;
+                        display: block;
+                        .filter(grayscale(1));
+                        .transition;
+                    
+                    }// img
+
+                }// figure
+
+                .action {
+                    width: 100%;
+                    height: 220px;
+                    position: relative;
+                    .left;
+                    
+
+                    h3 {
+                        font-size: 20px;
+                        .upper;
+                        .futura-bold;
+                        color: @verde;
+                        margin-bottom: 15px;
+                        .transition;
+
+                    }// h3
+
+                    p {
+                        font-size: 18px;
+                        color: @branco;
+                        .futura-book;
+                        line-height: 130%;
+                        letter-spacing: 1px;
+
+                    }// p
+
+                    &:after {
+                        content: '';
+                        .size(37);
+                        display: block;
+                        position: absolute;
+                        z-index: 1;
+                        bottom: 0;
+                        left: 50%;
+                        .translateX(-50%);
+                        background: url(../img/icons/setas.png) 0 0 no-repeat;
+                        .transition;
+
+                    }// :after
+
+                }// .action
+
+                &:hover, &.active {
+                    
+                    figure{
+                        border-color: @azul;
+                        .transition;
+
+                        img{.filter(grayscale(0)); .scale(1.05); .transition;}
+
+                        }// figure
+
+                    .action {
+
+                        h3 {color: @azul;}
+                        
+                        &:after {background-position: 0 bottom; .transition;}
+
+                    }// .action
+
+                }// :hover, .active
+
+            }// li
+
+        }// ul
+
+        .content {
+            width: 100%;
+            .left;
+            display: none;
+
+            p {font-size: 18px; letter-spacing: 0.8px;}
+
+            .info {
+                width: 46.875%;
+                .left;
+                
+                p {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 45px;
+                    color: @branco;
+                    line-height: 140%;
+
+                    strong {color: @azul;}
+                
+                }// p
+
+            }// .info
+
+            .video {
+                width: 53.125%;
+                height: 670px;
+                .left;
+                .box-sizing(border-box);
+                position: relative;
+
+                iframe {
+                    position: absolute;
+                    z-index: 1;
+                    top: 50%;
+                    margin-top: -200px;
+                    left: 107px;
+                    .border-radius(7);
+                
+                }// iframe
+
+            }//.video
+            
+
+        }// .content
+
+    }// .container
+
+}// #desafios
+
+#first-startup {
+    background-color: #f8f8f8;
+    background-image: url(../img/bg-first-startup.jpg);
+    .background-size(100%);
+    height: 670px;
+    .box-sizing(border-box);
+    
+    .container {
+        padding-top: 250px;
+        
+        .content {
+            width: 850px;
+            margin: 0 auto;
+            overflow: hidden;
+            
+            h1 {
+                width: 100%;
+                .left;
+                text-align: center;
+                font-size: 71.21px;
+                line-height: 100%;
+                color: @azul-escuro;
+                .futura-bold;
+                margin-bottom: 190px;
+                position: relative;
+
+                span {color: @azul;}
+
+                &:after {
+                    content: '';
+                    .size(92);
+                    display: block;
+                    .border-radius(50%);
+                    background: @azul url(../img/icons/head.png) center center no-repeat;
+                    position: absolute;
+                    z-index: 1;
+                    bottom:  -140px;
+                    left: 50%;
+                    .translateX(-50%);
+
+                }// :after
+
+
+            }// h1
+
+            p {
+                width: 100%;
+                .left;
+                text-align: center;
+                font-size: 20px;
+                color: @azul-escuro;
+                letter-spacing: 1px;
+                .futura-book;
+                line-height: 120%;
+
+            }// p
+
+        }// .content
+
+    }// .container
+
+}// #first-startup
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.lightbox {
+    width: 100%;
+    max-width: 1024px;
+    background-color: @azul;
+    .left;
+    position: absolute;
+    top: 763px;
+    left: 50%;
+    .translateX(-50%);
+    .box-sizing(border-box);
+    z-index: 10001;
+    .box-shadow(0px 0px 10px 0px rgba(0,0,0,0.8));
+    display: none;
+    
+    .wrapper {
+        width: 100%;
+        .box-sizing(border-box);
+        overflow: hidden;
+                
+        .fechar {
+            .size(23px, 24px);
+            display: block;
+            cursor: pointer;
+            text-indent: -5000px;
+            overflow: hidden;
+            background: url(../img/icons/close.png) 0 0 no-repeat;
+            .box-sizing(border-box);
+            .left;
+            position: absolute;
+            z-index: 1;
+            top: 44px;
+            right: 44px;
+            cursor: pointer;
+
+        }// .fechar
+
+        .content {
+            width: 795px;
+            padding: 96px 0;
+            margin: 0 auto;
+
+            h1 {
+                width: 100%;
+                .left;
+                font-size: 20px;
+                .futura-bold;
+                line-height: 100%;
+                color: @branco;
+                .upper;
+                margin-bottom: 75px;
+
+            }// h1
+
+            h2 {
+                width: 100%;
+                .left;
+                font-size: 18px;
+                color: @azul-escuro;
+                .upper;
+                margin-bottom: 40px;
+                .futura-bold;
+
+            }// h2
+
+            p {
+                width: 100%;
+                .left;
+                font-size: 18px;
+                color: @azul-escuro;
+                margin-bottom: 40px;
+                .futura-book;
+                letter-spacing: 1px;
+                line-height: 130%;
+
+            }// p
+
+            .video {
+                width: 100%;
+                .left;
+                text-align: center;
+                margin-bottom: 60px;
+                display: none;
+            
+            }// .video
+
+            .buttons {
+                width: 100%;
+                .left;
+                text-align: center;
+                margin-bottom: 100px;
+
+                .btn {
+                    font-size: 20px;
+                    .futura-bold;
+                    line-height: 100%;
+                    color: @branco;
+                    text-decoration: none;
+                    .upper;
+                    display: inline-block;
+                    border: 3px solid @branco;
+                    padding: 15px 60px;
+                    .transition;
+
+                    &:hover {
+                        border-color: @azul-escuro;
+                        color: @azul-escuro;
+                        .transition;
+                    }
+
+                }// .btn
+
+            }// .buttons
+
+        }// .content
+
+    }// .wrapper
+
+}// .lightbox
+
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1023px) {
+
+    .barra-landing {
+        
+        .barra-content {
+            width: 100%;
+            .box-sizing(border-box);
+            padding: 0 0 0 10px;
+
+        }// .barra-content
+
+    }// .barra-landing
+
+    section {.container {width: 100%; padding: 0 10px;}}
+
+    #video {
+        background-image: url(../img/bg-video.jpg);
+        margin-top: 60px;
+        
+        #videoPrincipal {display: none;}
+
+        .container {
+            padding-top: 135px;
+            
+            .tecnologia {
+                width: 90%;
+                
+                p {font-size: 20px;}
+
+                .criatividade-tecnologia {
+                    width: 457px;
+                    height: 92px;
+                    display: inline-block;
+                    background: url(../img/txt-criatividade-tecnologia.png) 0 0 no-repeat;
+                    text-indent: -5000px;
+                    overflow: hidden;
+                    float: none;
+                }
+
+            }// .tecnologia
+
+        }// .container
+
+    }// #video
+
+    #desafios {
+        .background-size(1598, 1486);
+        
+        .container {
+            
+            h2 {border-color: @verde; color: @verde;}
+
+            > p {
+                width: 450px;
+                .left;
+                clear: both;
+                font-size: 18px;
+                .futura-book;
+                letter-spacing: 1px;
+                color: @branco;
+                line-height: 130%;
+                margin-bottom: 77px;
+
+            }// p
+
+            .content {
+                
+                p {font-size: 15.3px;}
+
+                .video {
+                    width: 53.125%;
+                    height: 670px;
+                    .left;
+                    .box-sizing(border-box);
+                    position: relative;
+
+                    iframe {
+                        position: absolute;
+                        z-index: 1;
+                        top: 50%;
+                        margin-top: -200px;
+                        left: 107px;
+                        .border-radius(7);
+                    
+                    }// iframe
+
+                }//.video
+            
+            }// .content
+
+        }// .container
+
+    }// #desafios
+
+    #first-startup {
+        .background-size(1598, 239);
+                
+        .container {
+            padding-top: 250px;
+            
+            .content {
+                width: 90%;
+                margin: 0 auto;
+                overflow: hidden;
+                
+                p {font-size: 18px;}
+
+            }// .content
+
+        }// .container
+
+    }// #first-startup
+
+    #overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .lightbox {
+        width: 96%;
+                
+        .wrapper {
+            
+            .content {
+                width: 90%;
+                padding: 96px 0;
+                margin: 0 auto;
+
+            }// .content
+
+        }// .wrapper
+
+    }// .lightbox
+
+}// @media only screen and (max-width : 1023px)
+
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+}// @media only screen and (max-width : 767px)

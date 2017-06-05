@@ -1,0 +1,312 @@
+/* Reset */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, .wrapper, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* Webfonts
+*******************************************************************************************************/
+@font-face {
+  font-family: 'CaeciliaBold';
+  src:  url('../fonts/CaeciliaLTStd-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CaeciliaHeavy';
+  src:  url('../fonts/CaeciliaLTStd-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CaeciliaLight';
+  src:  url('../fonts/CaeciliaLTStd-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'CaeciliaLightItalic';
+  src:  url('../fonts/CaeciliaLTStd-LightItalic.woff') format('woff');
+}
+
+
+/* General
+*******************************************************************************************************/
+main.pageTalentos {
+    width: 100%;
+    float: left;
+    background: url(../img/bg-pattern.gif) fixed 0 0 repeat;
+}
+main.pageTalentos .container {width: 1280px; margin: 0 auto;}
+main.pageTalentos .container section.mosaico {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+main.pageTalentos .container section.mosaico h1 {
+    width: 100%;
+    float: left;
+    margin-bottom: 120px;
+    text-align: center;
+    font-size: 65px;
+    color: #06a7e2;
+    text-transform: uppercase;
+    font-family: 'CaeciliaHeavy';
+}
+main.pageTalentos .container section.mosaico h1 small {
+    display: block;
+    font-size: 28px;
+    font-family: 'CaeciliaLight';
+    color: #636161;
+    line-height: 160%;
+    text-transform: none;
+}
+main.pageTalentos .container section.mosaico .wrapper {width: calc(100% + 30px); float: left;}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case {
+    width: 300px;
+    height: 350px;
+    float: left;
+    margin-right: 27px;
+    margin-bottom: 27px;
+    cursor: pointer;
+    background-color: #fff;
+}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case.opacity figure {opacity: 0.6;}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure img {width: 100%; display: block;}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure figcaption {
+    float: left;
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    left: 0;
+    border-bottom: 2px solid #fff;
+    padding-left: 15px;
+    
+}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure figcaption p {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'CaeciliaLight';
+    text-transform: uppercase;
+    line-height: 130%;
+}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure figcaption p strong {font-family: 'CaeciliaBold';}
+main.pageTalentos .container section.mosaico .wrapper > .holder-case figure figcaption p small {
+    font-size: 16px;
+    display: block;
+    font-family: 'CaeciliaLightItalic';
+    text-transform: none;
+}
+
+main.pageTalentos .container section.mosaico .cont-video {
+    width: 100%;
+    float: left;
+    padding: 74px 0 100px;
+
+}
+
+main.pageTalentos .container section.mosaico .cont-video .holder-video {
+    width: 622px;
+    border: 1px solid #06a7e2;
+    background-color: #fff;
+    float: left;
+    padding-bottom: 74.5px;
+    position: relative;
+    left: 50%;
+    /*opacity: 0;*/
+    display: none;
+    
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+main.pageTalentos .container section.mosaico .cont-video .holder-video .close {
+    width: 38px;
+    height: 38px;
+    display: block;
+    background: #06a7e2 url(../img/close.png) center center no-repeat;
+    position: absolute;
+    left: 50%;
+    text-indent: -5000px;
+    overflow: hidden;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+main.pageTalentos .container section.mosaico .cont-video .holder-video p.nome-aluno {
+    color: #06a7e2;
+    font-size: 26px;
+    float: left;
+    font-family: 'CaeciliaLight';
+    text-transform: uppercase;
+    line-height: 130%;
+    padding: 50px 0 10px 30px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #06a7e2;
+}
+main.pageTalentos .container section.mosaico .cont-video .holder-video p.nome-aluno strong {font-family: 'CaeciliaBold';}
+main.pageTalentos .container section.mosaico .cont-video .holder-video p.nome-aluno small {
+    font-size: 22px;
+    display: block;
+    font-family: 'CaeciliaLightItalic';
+    text-transform: none;
+    color: #636161;
+}
+main.pageTalentos .container section.mosaico .cont-video .holder-video .texto {
+    width: 100%;
+    float: left;
+    padding: 0 30px;
+    font-family: 'CaeciliaLight';
+    color: #636161;
+    font-size: 16px;
+}
+main.pageTalentos .container section.mosaico .cont-video .holder-video .texto p {display: block; margin-bottom: 30px;}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    z-index: 9000;
+    background-color: rgba(255,255,255, 0.85);
+    display: none;
+}
+
+
+/* TABLET
+*******************************************************************************************************
+*******************************************************************************************************/
+@media only screen and (max-width : 1279px) {
+    main.pageTalentos .container {width: 96%;}
+    
+    main.pageTalentos .container section.mosaico h1 {margin-bottom: 60px; font-size: 54px;}
+    main.pageTalentos .container section.mosaico h1 small {font-size: 24px; letter-spacing: -2px;}
+    main.pageTalentos .container section.mosaico .wrapper {
+        width: 100%; 
+        float: left;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    main.pageTalentos .container section.mosaico .wrapper .holder-case {
+        float: none;
+        display: inline-block;
+    }
+        
+    main.pageTalentos .cont-video {
+        width: 100%;
+        float: left;
+        position: absolute;
+        z-index: 9001;
+    }
+
+    main.pageTalentos .cont-video .holder-video {
+        width: 96%;
+        max-width: 622px;
+        border: 1px solid #06a7e2;
+        background-color: #fff;
+        float: left;
+        padding-bottom: 74.5px;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        display: block;
+        z-index: 9002;
+        
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    main.pageTalentos .cont-video .holder-video iframe {width: 100%; max-width: 621px;}
+    main.pageTalentos .cont-video .holder-video .close {
+        width: 38px;
+        height: 38px;
+        display: block;
+        background: #06a7e2 url(../img/close.png) center center no-repeat;
+        position: absolute;
+        left: 50%;
+        text-indent: -5000px;
+        overflow: hidden;
+        bottom: 0;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    main.pageTalentos .cont-video .holder-video p.nome-aluno {
+        color: #06a7e2;
+        font-size: 26px;
+        float: left;
+        font-family: 'CaeciliaLight';
+        text-transform: uppercase;
+        line-height: 130%;
+        padding: 50px 0 10px 30px;
+        margin-bottom: 50px;
+        border-bottom: 3px solid #06a7e2;
+    }
+    main.pageTalentos .cont-video .holder-video p.nome-aluno strong {font-family: 'CaeciliaBold';}
+    main.pageTalentos .cont-video .holder-video p.nome-aluno small {
+        font-size: 22px;
+        display: block;
+        font-family: 'CaeciliaLightItalic';
+        text-transform: none;
+        color: #636161;
+    }
+    main.pageTalentos .cont-video .holder-video .texto {
+        width: 100%;
+        float: left;
+        padding: 0 30px;
+        font-family: 'CaeciliaLight';
+        color: #636161;
+        font-size: 16px;
+    }
+    main.pageTalentos .cont-video .holder-video .texto p {display: block; margin-bottom: 30px;}
+}
