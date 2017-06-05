@@ -1,0 +1,981 @@
+/*
+ ************************************************************************************************************************************
+ * =CADASTRO
+ ************************************************************************************************************************************
+*/
+
+#cadastro {
+    
+
+    h2 {
+        font-size: 25px; 
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dfdfdf;
+        margin-bottom: 30px;
+    
+    }// h2
+
+    h3 {
+        font-size: 19px; 
+        margin-bottom: 15px;
+        .verde;
+        .univers-std-ultra;
+        .upper;
+    
+    }// h3
+
+    input[type=radio], input[type=radio] {
+        margin: 0; 
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+
+    }// input radio e checkbox
+
+    input[type=text], 
+    input[type=password],
+    select {
+        width: 100%;
+        height: 41px;
+        line-height: 41px;
+        .box-sizing(border-box);
+        border: 1px solid #ccc;
+        text-indent: 10px;
+        .cinza-escuro;
+        font-size: 14px;
+        .rotis-ss-std-bold;
+        .placeholder(@cinza-escuro);
+        background-color: transparent;
+        .left;
+    }
+
+    select {text-indent: 0; padding-left: 7px;}
+    
+    .container {
+        
+        header {margin-top: 40px;}
+
+        article {
+            width: 100%;
+            float: left;
+
+            .tipo-cliente {
+                width: 100%;
+                .left;
+                margin-bottom: 40px;
+
+                >p {
+                    width: 190px;
+                    .left;
+                    margin-top: 25px;
+
+                }// >p
+
+                .box {
+                    width: 445px;
+                    .left;
+                    .box-sizing(border-box);
+                    .round(2px);
+                    background-color: #ebebeb;
+                    .respiro(20px, 20px, 20px, 20px);
+                    .rotis-ss-std-bold;
+
+                }// .box
+
+                .btn {
+                    .right;
+                    .bg-azul-escuro;
+                    .branco;
+                    .respiro(0, 0, 110px, 90px);
+                    position: relative;
+                    margin-top: 12px;
+
+                    &:before {
+                        content: '';
+                        width: 10px;
+                        height: 19px;
+                        display: block;
+                        position: absolute;
+                        z-index: 1;
+                        top: 11px;
+                        left: 90px;
+                        .spt;
+                        background-position: -157px 0;
+                    
+                    }
+
+                }// .btn
+
+            }// .tipo-cliente
+
+            form {
+                width: 100%;
+                .left;
+
+                fieldset {
+
+                    > div {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 40px;
+
+                        p {
+                            &.telefone {
+
+                                input {
+
+                                    &:first-child {width: 18.47%;}
+                                    &:last-child {width: 73.01%; .right;}
+                                
+                                }// input
+
+                            }// .telefone
+                        }
+
+                        &.dados-identificacao {
+
+                            p {
+                                .calc(width, ~'33.3% - 9.33px');
+                                margin-right: 28px;
+                                .left;
+                                margin-bottom: 18px;
+
+                                &.optin {
+                                    padding-top: 15px;
+                                    .rotis-ss-std-bold;
+                                    
+                                    label {
+                                        width: 95px;
+                                        .left;
+                                        .verde;
+
+                                    }// label
+
+                                    span {width: 100px; display: inline-block;}
+                                }
+                               
+                            }// p
+
+                        }// .dados-identificacao
+
+                        &.seus-enderecos {
+
+                            h3 {.left;}
+
+                            .wrapper {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 10px;
+
+                                p {
+                                    .calc(width, ~'33.3% - 9.33px');
+                                    margin-right: 28px;
+                                    .left;
+                                    margin-bottom: 18px;
+
+                                    &.full {
+                                        width: 100%;
+                                        
+                                        input {width: 20%;}
+                                    }
+
+                                    &.button {
+                                        width: 30%;
+                                        margin-right: 0;
+
+                                        input[type=button] {
+                                            width: 100%;
+                                            .left;
+                                            .btn;
+                                            height: 41px;
+                                            .branco;
+                                            .bg-laranja;
+                                            border: 0;
+                                            cursor: pointer;
+                                            .trans();
+
+                                            &:hover {.trans(); .bg-darken(@laranja);}
+
+                                        }// input button
+
+                                    }// .button
+                                   
+                                }// p
+
+                            }// wrapper
+
+                            .adicionar {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 30px;
+
+                                h3 {margin-top: 12px; margin-right: 22px;}
+
+                                input[type=button] {
+                                    width: 20%;
+                                    .left;
+                                    .btn;
+                                    height: 41px;
+                                    .branco;
+                                    .bg-verde;
+                                    border: 0;
+                                    cursor: pointer;
+                                    .trans();
+
+                                    &:hover {.trans(); .bg-darken(@verde);}
+
+                                }// input button
+
+                            }// .adicionar
+
+                            ul {
+                                width: 100%;
+                                .left;
+
+                                li {
+                                    .calc(width, ~'25% - 23px');
+                                    margin-right: 30px;
+                                    margin-bottom: 30px;
+                                    .left;
+
+                                    &:last-child {margin-right: 0;}
+
+                                    .endereco {
+                                        width: 100%;
+                                        .left;
+                                        .box-sizing(border-box);
+                                        .respiro(20px, 20px, 20px, 20px);
+                                        background-color: #ebebeb;
+                                        .round(2);
+
+                                        h4 {
+                                            .verde;
+                                            .upper;
+                                            .rotis-ss-std-bold;
+
+                                        }// h3
+
+                                        p {display: block; .rotis-ss-std-bold;}
+
+                                        button {
+                                            .calc(width, ~'50% - 9px');
+                                            .left;
+                                            margin-top: 20px;
+                                            .btn;
+                                            .branco;
+                                            .bg-verde;
+                                            border: 0;
+                                            cursor: pointer;
+                                            .trans();
+
+                                            &:hover {.trans(); .bg-darken(@verde);}
+
+                                            &:last-child {
+                                                .right;
+                                                .bg-laranja-escuro;
+
+                                                &:hover {.bg-darken(@laranja-escuro);}
+                                            }
+
+                                        }// button
+
+                                    }// .endereco
+                                
+                                }// li
+
+                            }//ul
+
+                        }// .seus-enderecos
+
+                        &.outras-informacoes {
+                           
+                            ul {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 18px;
+                                
+                                li {
+                                    .calc(width, ~'25% - 20px');
+                                    .left;
+                                    margin-right: 20px;
+                                    margin-bottom: 10px;
+                                    
+                                    &:nth-child(4n+4) {margin-right: 0;}
+
+                                    input[type=checkbox] {
+                                        display:inline-block; 
+                                        vertical-align: middle;
+                                        margin-right: 8px;
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+
+                                }// li
+
+                            }// ul
+
+                            .professor {
+                                width: 100%;
+                                .left;
+                                border-bottom: 1px solid #dfdfdf;
+                                padding-bottom: 25px;
+                                margin-bottom: 30px;
+
+                                input[type=checkbox] {
+                                    display:inline-block; 
+                                    vertical-align: middle;
+                                    margin-right: 8px;
+                                }
+
+                                span {
+                                    display: inline-block;
+                                    vertical-align: top;
+
+                                    strong {
+                                        display: block;
+                                        .verde;
+                                        .upper;
+                                        .rotis-ss-std-bold;
+
+                                    }// strong
+
+                                }// span
+
+                            }// .professor
+
+                            input[type=submit] {
+                                width: 160px;
+                                .left;
+                                .btn;
+                                .branco;
+                                .bg-laranja;
+                                border: 0;
+                                .trans();
+                                cursor: pointer;
+
+                                &:hover {.trans(); .bg-darken(@laranja);}
+
+                            }// input[type=submit]
+
+                        }// .outras-informacoes
+
+                        &.pessoa-juridica {
+
+                            .wrapper {
+                                width: 33.33%;
+                                .left;
+
+                                p {
+                                    width: 100%;
+                                    margin-right: 28px;
+                                    .left;
+                                    margin-bottom: 18px;
+
+                                    &.optin {
+                                        padding-top: 15px;
+                                        .rotis-ss-std-bold;
+                                        
+                                        label {
+                                            width: 95px;
+                                            .left;
+                                            .verde;
+
+                                        }// label
+
+                                        span {width: 100px; display: inline-block;}
+                                    }
+                                   
+                                }// p
+
+                            }// .wrapper
+
+                            .box-msg {
+                                width: 40%;
+                                .right;
+                                margin-right: 15%;
+                                background-color: #ebebeb;
+                                .box-sizing(border-box);
+                                font-size: 16px;
+                                line-height: 130%;
+                                .respiro(20px, 20px, 20px, 20px);
+                                .round(2);
+                            }
+
+                            input[type=submit] {
+                                width: 160px;
+                                .left;
+                                clear: both;
+                                .btn;
+                                .branco;
+                                .bg-laranja;
+                                border: 0;
+                                .trans();
+                                cursor: pointer;
+                                margin-top: 20px;
+
+                                &:hover {.trans(); .bg-darken(@laranja);}
+
+                            }// input[type=submit]
+
+                        }// .pessoa-juridica
+                    
+                    }// > div
+
+                }// fieldset
+
+            }// form
+
+            .msg-sucesso {
+                min-height: 500px;
+                display: none;
+                
+                p {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 130%;
+
+                    strong {font-size: 18px; .verde;}
+                
+                }// p
+
+            }// .msg-suceso
+
+
+            // Cadastro Facebook
+
+            .complemento {
+                width: 730px;
+                margin: 0 auto;
+                overflow: hidden;
+                .bg-cinza-claro;
+                .box-sizing(border-box);
+                .respiro(40px, 40px, 40px, 40px);
+                margin-bottom: 60px;
+
+                .perfil {
+                    width: 100%;
+                    .left;
+                    margin-bottom: 40px;
+
+                    figure {
+                        .size(95);
+                        .round(50%);
+                        .box-sizing(border-box);
+                        overflow: hidden;
+                        .left;
+                        border: 5px solid @branco;
+                        margin-right: 20px;
+
+                    }// figure
+
+                    p {
+                        font-size: 20px;
+                        margin-top: 40px;
+                        
+                        strong {.rotis-ss-std-bold;}
+
+                    }// p
+
+                }// .perfil
+
+                h2 {margin-bottom: 20px;}
+
+                input[type=text] {
+                    width: 72%; 
+                    height: 40px;
+                    line-height: 40px;
+                    .left;
+                    .bg-branco;
+                }
+
+                input[type=submit] {
+                    width: 25%;
+                    .btn;
+                    .right;
+                    .branco;
+                    .bg-laranja;
+                    border: 0;
+                    .trans();
+                    cursor: pointer;
+                    
+                    &:hover {.trans(); .bg-darken(@laranja);}
+
+                }// input[type=submit]
+
+                
+
+            }// .complemento
+
+        }// article
+
+    }// .container
+
+}// #cadastro
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =CADASTRO
+     ************************************************************************************************************************************
+    */
+
+    #cadastro {
+        
+
+        input[type=radio], input[type=radio] {
+            margin: 0; 
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+
+        }// input radio e checkbox
+
+        input[type=text], 
+        input[type=password],
+        select {
+            width: 100%;
+            height: 41px;
+            line-height: 41px;
+            .box-sizing(border-box);
+            border: 1px solid #ccc;
+            text-indent: 10px;
+            .cinza-escuro;
+            font-size: 14px;
+            .rotis-ss-std-bold;
+            .placeholder(@cinza-escuro);
+            background-color: transparent;
+            .left;
+        }
+
+        select {text-indent: 0; padding-left: 7px;}
+        
+        .container {
+            width: 100%;
+            .respiro(0, 0, 10px, 10px);
+            .box-sizing(border-box);
+            
+            header {margin-top: 40px;}
+
+            article {
+                width: 100%;
+                float: left;
+
+                .tipo-cliente {
+                    
+                    .box {width: 50%;}
+
+                    .btn {.left !important; margin-top: 40px !important;}
+
+                }// .tipo-cliente
+
+                form {
+                    width: 100%;
+                    .left;
+
+                    fieldset {
+
+                        > div {
+                            width: 100%;
+                            .left;
+                            margin-bottom: 40px;
+
+                            p {
+                                &.telefone {
+
+                                    input {
+
+                                        &:first-child {width: 18.47%;}
+                                        &:last-child {width: 73.01%; .right;}
+                                    
+                                    }// input
+
+                                }// .telefone
+                            }
+
+                            &.dados-identificacao {
+
+                                p {
+                                    
+                                    &.optin {
+                                        padding-top: 15px;
+                                        .rotis-ss-std-bold;
+                                        
+                                        label {width: 15%;}
+
+                                        span {width: 70px; display: inline-block;}
+                                    }
+                                   
+                                }// p
+
+                            }// .dados-identificacao
+
+                            &.seus-enderecos {
+
+                                .adicionar {input[type=button] {width: 30%;}}
+
+                                ul {
+                                    width: 100%;
+                                    .left;
+
+                                    li {
+                                        .calc(width, ~'25% - 10px');
+                                        margin-right: 10px;
+                                        margin-bottom: 30px;
+                                        
+                                        .endereco {
+                                            .respiro(10px, 10px, 10px, 10px);
+                                            
+                                            button {.calc(width, ~'50% - 9px');}
+
+                                        }// .endereco
+                                    
+                                    }// li
+
+                                }//ul
+
+                            }// .seus-enderecos
+
+                            &.outras-informacoes {
+                               
+                                ul {
+                                                                       
+                                    li {
+                                        .calc(width, ~'25% - 10px');
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+                                        
+                                    }// li
+
+                                }// ul
+
+                            }// .outras-informacoes
+
+                            
+                        
+                        }// > div
+
+                    }// fieldset
+
+                }// form
+
+                .msg-sucesso {min-height: 400px;}
+
+
+                // Cadastro Facebook
+
+                .complemento {width: 100%;}
+
+            }// article
+
+        }// .container
+
+    }// #cadastro
+
+}// @media only screen and (max-width : 1139px)
+
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =CADASTRO
+     ************************************************************************************************************************************
+    */
+
+    #cadastro {
+        
+
+        input[type=radio], input[type=radio] {
+            margin: 0; 
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+
+        }// input radio e checkbox
+
+        input[type=text], 
+        input[type=password],
+        select {
+            width: 100%;
+            height: 41px;
+            line-height: 41px;
+            .box-sizing(border-box);
+            border: 1px solid #ccc;
+            text-indent: 10px;
+            .cinza-escuro;
+            font-size: 14px;
+            .rotis-ss-std-bold;
+            .placeholder(@cinza-escuro);
+            background-color: transparent;
+            .left;
+        }
+
+        select {text-indent: 0; padding-left: 7px;}
+        
+        .container {
+            .respiro(0, 0, 26px, 26px);
+            
+            
+            header {margin-top: 20px; h1 {font-size: 25px;}}
+
+            h2 {
+                font-size: 18px;
+                padding-bottom: 0;
+                border-bottom: none;
+                .univers-std-ultra;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 17px;
+                text-transform: none;
+            }
+
+            article {
+                width: 100%;
+                float: left;
+
+                .tipo-cliente {
+                    border-bottom: 1px solid #dfdfdf;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+
+                    p {margin-top: 0; margin-bottom: 20px;}
+                    
+                    .box {width: 100%;}
+
+                    .btn {
+                        width: 100%;
+                        padding-left: 25px;
+
+                        &:before {left: 10px;}
+
+                    }// .btn
+
+                }// .tipo-cliente
+
+                form {
+                    width: 100%;
+                    .left;
+
+                    fieldset {
+
+                        > div {
+                            width: 100%;
+                            .left;
+                            margin-bottom: 40px;
+
+                            p {width: 100%;}
+
+                            p {
+
+                                &.telefone {
+
+                                    input {
+
+                                        &:first-child {width: 18.47%;}
+                                        &:last-child {width: 73.01%; .right;}
+                                    
+                                    }// input
+
+                                }// .telefone
+                            }
+
+                            &.dados-identificacao {
+                                border-bottom: 1px solid #dfdfdf;
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+
+                                p {
+                                    width: 100% !important;
+                                    margin-bottom: 10px;
+                                    margin-right: 0;
+                                }
+
+                                p {
+                                    
+                                    &.optin {
+                                        padding-top: 15px;
+                                        .rotis-ss-std-bold;
+                                        
+                                        label {width: 15%;}
+
+                                        span {width: 70px; display: inline-block;}
+                                    }
+                                   
+                                }// p
+
+                            }// .dados-identificacao
+
+                            &.seus-enderecos {
+
+                                .adicionar {input[type=button] {width: 100%;}}
+
+                                .wrapper {
+                                    p {
+                                        width: 100% !important;
+                                        margin-bottom: 10px;
+                                        margin-right: 0;
+
+                                        &.full {
+                                            input {width: 50%;}
+                                        }
+                                    }
+                                }
+
+                                ul {
+                                    width: 100%;
+                                    .left;
+
+                                    li {
+                                        width: 100%;
+                                        margin-bottom: 10px;
+                                        
+                                        .endereco {
+                                            .respiro(10px, 10px, 10px, 10px);
+                                            
+                                            button {.calc(width, ~'50% - 9px');}
+
+                                        }// .endereco
+                                    
+                                    }// li
+
+                                }//ul
+
+                            }// .seus-enderecos
+
+                            &.outras-informacoes {
+                               
+                                ul {
+                                                                       
+                                    li {
+                                        width: 100%;
+                                        margin-right: 10px;
+                                        margin-bottom: 10px;
+                                        
+                                    }// li
+
+                                }// ul
+
+                                .professor {span {width: 80%;}}
+
+                                input[type=submit] {width: 100%;}
+
+                            }// .outras-informacoes
+
+                            &.pessoa-juridica {
+                                position: relative;
+                                padding-top: 50px;
+
+                                .wrapper {
+                                    width: 100% !important;
+                                    
+                                    p {
+                                        width: 100%;
+                                        margin-right: 28px;
+                                        .left;
+                                        margin-bottom: 18px;
+
+                                        &.optin {
+                                            padding-top: 15px;
+                                            .rotis-ss-std-bold;
+                                            
+                                            label {
+                                                width: 95px;
+                                                .left;
+                                                .verde;
+
+                                            }// label
+
+                                            span {width: 100px; display: inline-block;}
+                                        }
+                                       
+                                    }// p
+
+                                }// .wrapper
+
+                                .box-msg {
+                                    width: 100%;
+                                    .left;
+                                    margin-right: 0;
+                                    background-color: transparent;
+                                    font-size: 14px;
+                                    line-height: 130%;
+                                    .respiro(0, 0, 0, 0);
+                                    .round(2);
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                input[type=submit] {
+                                    width: 100%;
+                                    
+
+                                }// input[type=submit]
+
+                            }// .pessoa-juridica
+                        
+                        }// > div
+
+                        
+
+                    }// fieldset
+
+                }// form
+
+                .msg-sucesso {min-height: 400px;}
+
+                
+
+
+                // Cadastro Facebook
+
+                .complemento {
+                    width: 100%;
+                    .respiro(20px, 20px, 15px, 15px);
+                    margin-bottom: 20px;
+
+                    input[type=text] {
+                        width: 100%; 
+                        margin-bottom: 18px;
+                        
+                    }
+
+                    input[type=submit] {
+                        width: 100%;
+                        
+
+                    }// input[type=submit]
+
+                    
+
+                }// .complemento
+
+            }// article
+
+        }// .container
+
+    }// #cadastro
+
+}// @media only screen and (max-width : 767px)
+

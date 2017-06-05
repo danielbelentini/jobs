@@ -1,0 +1,1250 @@
+/*
+ ************************************************************************************************************************************
+ * =CARRINHO
+ ************************************************************************************************************************************
+*/
+
+#carrinho {
+    
+    .container {
+
+        header {margin-top: 40px; h1 {width: 100%;}}
+
+        article {
+            width: 100%;
+            .left;
+            
+            .listagem-mobile {display: none;}
+
+            .listagem-carrinho  {
+
+                ul {
+                    width: 100%;
+
+                    li {
+                        width: 100%;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 30px;
+                        margin-bottom: 50px;
+
+                        > table {
+                            width: 100%;
+
+                            tr {
+
+                                > td {
+                                    width: 50%;
+                                    vertical-align: top;
+
+                                    .produto {
+                                        width: 95%;
+                                        .left;
+
+                                        figure {
+                                            width: 115px;
+                                            .left;
+                                            margin-right: 30px;
+
+                                        }// figure
+
+                                        .info {
+                                            width: 350px;
+                                            
+                                            h3 {
+                                                width: 100%;
+                                                .rotis-serif-bold;
+                                                font-size: 18px;
+                                                margin-bottom: 5px;
+
+                                            }// h3
+
+                                            .autor {
+                                                .rotis-ss-std-italic;
+                                                font-size: 16px;
+                                                display: block;
+                                                margin-bottom: 20px;
+                                            
+                                            }// .autor
+
+                                            .presente {
+                                                width: 100%;
+                                                
+                                                label {
+                                                    width: 100%;
+                                                    display: block;
+
+                                                    input[type=checkbox] {
+                                                        display: inline-block;
+                                                        margin: 0;
+                                                        margin-right: 5px;
+
+                                                    }// input
+
+                                                    p {
+                                                        font-size: 14px;
+                                                        display: inline-block;
+                                                        vertical-align: top;
+
+                                                        strong {.rotis-ss-std-bold;}
+
+                                                    }// p
+
+                                                }// label
+
+                                            }// .presente
+
+                                        }// .info
+
+                                    }// .produto
+
+                                    table {
+                                        width: 100%;
+                                        
+                                        thead {
+
+                                            tr {
+
+                                                th {
+                                                    width: 33.3%;
+                                                    height: 38px;
+                                                    text-align: center;
+                                                    vertical-align: top;
+                                                    .univers-std-ultra;
+                                                    font-size: 18px;
+                                                    .verde;
+                                                    .upper;
+
+                                                }// th
+
+                                            }// tr
+
+                                        }// thead
+
+                                        tbody {
+
+                                            tr {
+
+                                                td {
+                                                    width: 33.3%;
+                                                    text-align: center;
+
+                                                    .soma-sub {
+                                                        width: 70px;
+                                                        height: 41px;
+                                                        .box-sizing(border-box);
+                                                        display: inline-block;
+                                                        position: relative;
+                                                        text-align: left;
+                                                        margin-bottom: 18px;
+
+                                                        input[type=text] {
+                                                            .size(41);
+                                                            .box-sizing(border-box);
+                                                            border: 1px solid rgba(149, 149, 149, 0.5);
+                                                            text-align: center;
+                                                            font-size: 18px;
+                                                            background-color: transparent;
+
+                                                        }// input
+
+                                                        .wrapper {
+                                                            width: 30px;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            right: 0;
+                                                            z-index: 1;
+                                                            text-align: center;
+
+                                                            span {
+                                                                width: 13px;
+                                                                height: 7px;
+                                                                .spt-no-text;
+                                                                display: inline-block;
+                                                                cursor: pointer;
+
+                                                                &.soma {
+                                                                    margin-top: 5px;
+                                                                    margin-bottom: 5px;
+                                                                    background-position: -190px -87px;
+                                                                }
+
+                                                                &.subtrai { background-position: -190px -99px;}
+                                                                                                                        
+                                                            }
+                                                            
+                                                            hr {
+                                                                width: 30px;
+                                                                height: 1px;
+                                                                color: rgba(149, 149, 149, 0.5);
+                                                                background-color: rgba(149, 149, 149, 0.5);
+                                                                border: 0;
+                                                                margin: 0;
+
+                                                            }// hr
+
+                                                        }// .wrapper
+
+                                                    }// .soma-sub
+
+                                                    .opts {
+                                                        width: 110px;
+                                                        text-align: left;
+                                                        .box-sizing(border-box);
+                                                        margin-left: 50px;
+
+                                                        a {
+                                                            display: block;
+                                                            font-size: 12px;
+                                                            .cinza-escuro;
+                                                            margin-bottom: 5px;
+                                                            padding-left: 15px;
+                                                            .box-sizing(border-box);
+                                                            position: relative;
+                                                            
+                                                            &:before {
+                                                                .futura-bold;
+                                                                font-size: 15px;
+                                                                .verde;
+                                                                position: absolute;
+                                                                z-index: 1;
+                                                                top: -2px;
+                                                                left: 0;
+                                                            }
+
+                                                            &.remover-item {&:before {content: '-';}}
+                                                            &.adicionar {&:before {content: '+';}}
+
+                                                            &:hover {text-decoration: underline;}
+
+                                                        }// a
+                                                        
+                                                    }// .opts
+
+                                                    small, span {display: block; text-align: center;}
+
+                                                    small {text-decoration: line-through; margin-bottom: 10px;}
+
+                                                    .preco {
+                                                        font-size: 24px;
+                                                        .rotis-ss-std-bold;
+                                                    }
+
+                                                } //td
+
+                                            }// tr
+
+                                        }// tbody
+
+                                    }// table
+                                
+                                }// td
+
+                            }// tr
+
+                        }// table
+                    
+                    }// li
+
+                }//ul
+
+                .entrega {
+                    .calc(width, ~'50% - 16px');
+                    .left;
+                    padding-bottom: 40px;
+                    
+                    label {
+                        width: 100%; 
+                        font-size: 18px;
+                        display: block;
+                        margin-bottom: 15px;
+
+                    }// label
+
+                    input[type=text] {
+                        width: 158px;
+                        height: 40px;
+                        font-size: 18px;
+                        margin-right: 30px;
+                        backgrouns-color: transparent;
+                        text-indent: 15px; 
+                        .box-sizing(border-box);
+                        display: inline-block;
+                        vertical-align: top;
+
+                    }// input
+
+                    input[type=button] {
+                        width: 40%;
+                        .btn;
+                        .bg-cinza-escuro;
+                        .branco;
+                        border: 0;
+                        .trans();
+                        cursor: pointer;
+
+                        &:hover {.trans; .bg-darken(@cinza-escuro);}
+
+                    }// input button
+
+                }// .entrega
+
+                .total-pedido {
+                    .calc(width, ~'50% - 16px');
+                    .right;
+                    padding-bottom: 40px;
+
+                    p {
+                        width: 100%;
+                        .left;
+                        font-size: 18px;
+
+                        strong {.rotis-ss-std-bold;}
+
+                    }//p
+
+                }// .total-pedido
+
+                .buttons {
+                    width: 100%;
+                    .left;
+                    border-top: 1px solid #ccc;
+                    padding-top: 30px;
+                    margin-bottom: 70px;
+                    position: relative;
+
+                    input[type=submit] {
+                        .respiro(0, 0, 74px, 47px);
+                        .btn;
+                        .branco;
+                        border: 0;
+                        .right;
+                        .box-sizing(border-box);
+                        background: #33986d url(../img/icon/ok.png) 43px 10px no-repeat;
+                        cursor: pointer;
+                        .trans();
+
+                        &:hover {
+                            .bg-darken(#33986d);
+                            .trans();
+                        }
+                    
+                    }// input submit
+
+                    input[type=button] {
+                        .respiro(0, 0, 59px, 28px);
+                        .btn;
+                        .branco;
+                        border: 0;
+                        .right;
+                        .box-sizing(border-box);
+                        background: @laranja url(../img/icon/shop.png) 27px 10px no-repeat;
+                        cursor: pointer;
+                        .trans();
+                        margin-right: 32px;
+
+                        &:hover {
+                            .bg-darken(@laranja);
+                            .trans();
+                        }
+                    
+                    }// input submit
+
+                }// .buttons
+
+            }// .listagem-carrinho
+            
+            .oferta-especial {
+                .calc(width, ~'50% - 16px');
+                .left;
+                margin-right: 32px;
+                margin-bottom: 60px;
+
+                &:last-child {margin-right: 0;}
+
+            }// .oferta-especial
+
+        }// article
+
+    }// .container
+
+    .aproveite {
+        width: 100%;
+        .left;
+        .respiro(60px, 70px, 0, 0);
+        background-color: rgba(240, 240, 240, 0.5);
+    }
+
+}// #carrinho
+
+/*
+ ************************************************************************************************************************************
+ * =PRESENTE
+ ************************************************************************************************************************************
+*/
+
+#presente {
+
+    .container {
+
+        .lista-presentes {
+
+            .item {
+                width: 100%;
+                .left;
+                .respiro(20px, 20px, 0, 0);
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                
+                .produto {
+                    width: 50%;
+                    .left;
+
+                    figure {
+                        width: 115px;
+                        .left;
+                        margin-right: 30px;
+
+                    }// figure
+
+                    .info {
+                        width: 350px;
+                        
+                        h3 {
+                            width: 100%;
+                            .rotis-serif-bold;
+                            font-size: 18px;
+                            margin-bottom: 5px;
+
+                        }// h3
+
+                        .autor {
+                            .rotis-ss-std-italic;
+                            font-size: 16px;
+                            display: block;
+                            margin-bottom: 20px;
+                        
+                        }// .autor
+
+                        .presente {
+                            width: 100%;
+                            
+                            label {
+                                width: 100%;
+                                display: block;
+
+                                input[type=checkbox] {
+                                    display: inline-block;
+                                    margin: 0;
+                                    margin-right: 5px;
+
+                                }// input
+
+                                p {
+                                    font-size: 14px;
+                                    display: inline-block;
+                                    vertical-align: top;
+
+                                    strong {.rotis-ss-std-bold;}
+
+                                }// p
+
+                            }// label
+
+                        }// .presente
+
+                    }// .info
+
+                }// .produto
+
+                .envio-msg {
+                    >p {
+                        .left;
+                        
+                        label {
+                            width: 100%;
+                            .left;
+                            .univers-std-ultra;
+                            .upper;
+                            font-size: 18px;
+                            .verde;
+                            margin-bottom: 13px;
+                        
+                        }// label
+
+                        input[type=text] {
+                            width: 100%;
+                            .left;
+                            height: 40px;
+                            text-indent: 10px;
+                            .box-sizing(border-box);
+                            border: 1px solid #ccc;
+
+                        }// input text
+
+                        textarea {
+                            width: 100%;
+                            .left;
+                            height: 82px;
+                            padding-left: 10px;
+                            .box-sizing(border-box);
+                            border: 1px solid #ccc;
+                            resize: none;
+                            margin-bottom: 20px;
+
+                        }// input text
+
+                        span {
+                            .right;
+                            strong {.verde;}
+
+                        }
+
+                    }// >p
+                    
+                    .nome-presenteado {width: 175px; margin-right: 30px;}
+
+                    .mensagem-presenteado {width: 350px;}
+                
+                }// .envio-msg
+
+                
+
+            }// .item
+
+            input[type=submit] {
+                width: 255px;
+                .btn;
+                .branco;
+                .bg-verde;
+                .right;
+                margin-bottom: 60px;
+                border: 0;
+                cursor: pointer;
+                .trans();
+
+                &:hover {.trans(); .bg-darken(@verde);}// hover
+
+            }// input submit
+            
+        }// .lista-presentes
+
+        
+
+        
+
+    }// .container
+
+}// #presente
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =CARRINHO
+     ************************************************************************************************************************************
+    */
+
+    #carrinho {
+        
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            header {margin-top: 40px; h1 {width: 100%;}}
+
+            article {
+                width: 100%;
+                .left;
+
+                .listagem-carrinho  {
+
+                    .entrega {
+                        .calc(width, ~'50% - 16px');
+                        
+                        input[type=text] {width: 25%; margin-right: 15px}
+
+                    }// .entrega
+
+                }// .listagem-carrinho
+                
+                .oferta-especial {
+                    .calc(width, ~'50% - 15px');
+                    margin-right: 30px;
+                    margin-bottom: 0;
+                                        
+                    .lista {
+                        width: 100%;
+                        
+                        li {
+                            .calc(width, ~'100% - 15px');
+                            float: left;
+                            margin-bottom: 20px;
+
+                            &:nth-child(2n+2) {float: left; margin-bottom: 0;}
+
+                            figure {margin-right: 10px;}
+
+                            .info {width: 235px; float: left;}
+
+                        }// li
+
+                    }// .lista
+
+                    > p {
+                        float: left;
+                        .texto(14px, @verde, 100%);
+                        .rotis-ss-std-bold;
+                        margin-bottom: 17px;
+
+                        span {
+                            .texto(); 
+                            .rotis-ss-std-bold;
+                                                
+                        }// span
+
+                        &.preco-normal {
+                        
+                            margin-right: 30px;
+
+                            span {margin-left: 15px;}// span
+
+                        }// preco-normal
+
+                    }// p
+
+                    .preco-promocional {
+                        
+                        p {
+                            margin-right: 0;
+                            
+                            span {
+                                margin-left: 5px;
+                                font-size: 20px;
+                                margin-right: 5px;
+                            }
+
+                        }// p
+
+                    }// .preco-promocional
+
+                }// .oferta-especial
+
+            }// article
+
+        }// .container
+
+        .aproveite {
+            width: 100%;
+            .left;
+            .respiro(60px, 70px, 0, 0);
+            
+        }// .aproveite
+
+    }// #carrinho
+
+    /*
+ ************************************************************************************************************************************
+ * =PRESENTE
+ ************************************************************************************************************************************
+*/
+
+#presente {
+
+    .container {
+        width: 100%;
+        .respiro(0, 40px, 10px, 10px);
+        .box-sizing(border-box);
+
+        .lista-presentes {
+
+            .item {
+                
+                
+                .envio-msg {
+                    .nome-presenteado {margin-bottom: 30px;}
+
+                    .mensagem-presenteado {width: 350px;}
+                
+                }// .envio-msg
+
+                
+
+            }// .item
+
+            input[type=submit] {
+                width: 255px;
+                .btn;
+                .branco;
+                .bg-verde;
+                .right;
+                margin-bottom: 60px;
+                border: 0;
+                cursor: pointer;
+                .trans();
+
+                &:hover {.trans(); .bg-darken(@verde);}// hover
+
+            }// input submit
+            
+        }// .lista-presentes
+
+    }// .container
+
+}// #presente
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =CARRINHO
+     ************************************************************************************************************************************
+    */
+
+    #carrinho {
+        h1 {font-size: 25px;}
+
+        h2 {.univers-std-ultra; font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 26px, 26px);
+            .box-sizing(border-box);
+
+            header {margin-top: 20px; h1 {width: 100%;}}
+
+            article {
+                width: 100%;
+                .left;
+
+                .listagem-carrinho  {
+
+                    form {
+
+                        fieldset {
+
+                            ul {display: none;}
+
+                            .listagem-mobile {
+                                width: 100%;
+                                .left;
+                                padding-bottom: 20px;
+                                margin-bottom: 20px;
+                                border-bottom: 2px solid #dbdbdb;
+                                display: block;
+
+                                .produto {
+                                    width: 100%;
+                                    .left;
+                                    margin-bottom: 20px;
+
+                                    figure {
+                                        .calc(width, ~'40% - 5px'); 
+                                        margin-right: 10px;
+                                        .left;
+                                    }
+
+                                    .info {
+                                        .calc(width, ~'60% - 5px');
+                                        .left;
+                                        margin-bottom: 20px;
+
+
+                                        h3 {
+                                            font-size: 20.5px;
+                                            line-height: 130%;
+                                            margin-bottom: 10px;
+
+                                        }// h3
+
+                                        .autor {
+                                            font-size: 16px;
+                                            .rotis-ss-std-italic;
+                                            margin-bottom: 10px;
+
+                                            a {.cinza-escuro;}
+
+                                        }// .autor
+
+                                        .presente {
+                                            width: 100%;
+                                            
+                                            label {
+                                                width: 100%;
+                                                display: block;
+
+                                                input[type=checkbox] {
+                                                    display: inline-block;
+                                                    margin: 0;
+                                                    margin-right: 5px;
+                                                    position: relative;
+                                                    top: 3px;
+
+                                                }// input
+
+                                                p {
+                                                    font-size: 14px;
+                                                    display: inline-block;
+                                                    vertical-align: top;
+
+                                                    strong {.rotis-ss-std-bold;}
+
+                                                }// p
+
+                                            }// label
+
+                                        }// .presente
+
+                                    }// .info
+
+                                    .quant {
+                                        .calc(width, ~'60% - 5px');
+                                        .right;
+
+                                        .soma-sub {
+                                            width: 70px;
+                                            height: 70px;
+                                            .box-sizing(border-box);
+                                            .left;
+                                            position: relative;
+                                            text-align: left;
+                                            margin-bottom: 18px;
+                                            
+                                            margin-top: 20px;
+                                            
+
+                                            strong {
+                                                display: block;
+                                                margin-bottom: 10px;
+                                                .univers-std-ultra;
+                                                .verde;
+                                                .upper;
+                                                font-size: 19px;
+                                            }
+
+                                            input[type=text] {
+                                                .size(41);
+                                                .box-sizing(border-box);
+                                                border: 1px solid rgba(149, 149, 149, 0.5);
+                                                text-align: center;
+                                                font-size: 18px;
+                                                background-color: transparent;
+
+                                            }// input
+
+                                            .wrapper {
+                                                width: 30px;
+                                                position: absolute;
+                                                top: 27px;
+                                                right: 0;
+                                                z-index: 1;
+                                                text-align: center;
+
+                                                span {
+                                                    width: 13px;
+                                                    height: 7px;
+                                                    .spt-no-text;
+                                                    display: inline-block;
+                                                    cursor: pointer;
+
+                                                    &.soma {
+                                                        margin-top: 5px;
+                                                        margin-bottom: 5px;
+                                                        background-position: -190px -87px;
+                                                    }
+
+                                                    &.subtrai { background-position: -190px -99px;}
+                                                                                                            
+                                                }
+                                                
+                                                hr {
+                                                    width: 30px;
+                                                    height: 1px;
+                                                    color: rgba(149, 149, 149, 0.5);
+                                                    background-color: rgba(149, 149, 149, 0.5);
+                                                    border: 0;
+                                                    margin: 0;
+
+                                                }// hr
+
+                                            }// .wrapper
+
+                                        }// .soma-sub
+
+                                    }// .quant
+
+                                    .opts {
+                                        width: 100%;
+                                        text-align: left;
+                                        .box-sizing(border-box);
+                                        padding-left: 19px;
+                                        .left;
+                                        margin-bottom: 20px;
+
+                                        a {
+                                            display: block;
+                                            font-size: 12px;
+                                            .cinza-escuro;
+                                            margin-bottom: 5px;
+                                            padding-left: 15px;
+                                            .box-sizing(border-box);
+                                            position: relative;
+                                            
+                                            &:before {
+                                                .futura-bold;
+                                                font-size: 15px;
+                                                .verde;
+                                                position: absolute;
+                                                z-index: 1;
+                                                top: -2px;
+                                                left: 0;
+                                            }
+
+                                            &.remover-item {&:before {content: '-';}}
+                                            &.adicionar {&:before {content: '+';}}
+
+                                        }// a
+                                        
+                                    }// .opts
+
+                                    .valores {
+                                        width: 100%;
+                                        .left;
+                                        .box-sizing(border-box);
+                                        padding-left: 19px;
+
+                                        > div {
+
+                                            .calc(width, ~'50% - 5px');
+                                            .left;
+
+                                            strong {
+                                                display: block;
+                                                margin-bottom: 10px;
+                                                .univers-std-ultra;
+                                                .verde;
+                                                .upper;
+                                                font-size: 19px;
+                                            }
+
+                                            small, span {display: block;}
+
+                                            small {text-decoration: line-through; margin-bottom: 10px;}
+
+                                            .preco {
+                                                font-size: 24px;
+                                                .rotis-ss-std-bold;
+                                            }
+
+                                        }
+
+                                        
+                                    }
+
+                                    
+                                
+                                }// .produto
+
+                            }// .listagem-mobile
+
+                        }// fieldset
+
+                    }// form
+
+                    .entrega {
+                        width: 100%;
+                        .left;
+                        padding-bottom: 40px;
+                        
+                        label {
+                            width: 100%; 
+                            font-size: 18px;
+                            display: block;
+                            margin-bottom: 15px;
+
+                        }// label
+
+                        input[type=text] {width: 62%; margin-bottom: 12px;}
+
+                        input[type=button] {width: 100%;}
+
+                    }// .entrega
+
+                    .total-pedido {
+                        width: 100%;
+                        .left;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        border-top: 1px solid #cfcfcf;
+
+                        p {
+                            width: 100%;
+                            .left;
+                            font-size: 18px;
+
+                            strong {.rotis-ss-std-bold;}
+
+                        }//p
+
+                    }// .total-pedido
+
+                    .buttons {
+                        width: 100%;
+                        .left;
+                        border-top: 1px solid #ccc;
+                        padding-top: 30px;
+                        margin-bottom: 20px;
+                        position: relative;
+                        padding-bottom: 20px;
+                        border-bottom: 2px solid #dbdbdb;
+
+                        input[type=submit] {
+                            width: 100%;
+                            .box-sizing(border-box);
+                            .respiro(0, 0, 74px, 47px);
+                            .btn;
+                            .branco;
+                            border: 0;
+                            .right;
+                            background: #33986d url(../img/icon/ok.png) 43px 10px no-repeat;
+                            cursor: pointer;
+                            .trans();
+                            margin-bottom: 10px;
+
+
+                            &:hover {
+                                .bg-darken(#33986d);
+                                .trans();
+                            }
+                        
+                        }// input submit
+
+                        input[type=button] {
+                            width: 100%;
+                            .respiro(0, 0, 59px, 28px);
+                            .btn;
+                            .branco;
+                            border: 0;
+                            .right;
+                            .box-sizing(border-box);
+                            background: @laranja url(../img/icon/shop.png) 27px 10px no-repeat;
+                            cursor: pointer;
+                            .trans();
+                            margin-right: 0;
+
+                            &:hover {
+                                .bg-darken(@laranja);
+                                .trans();
+                            }
+                        
+                        }// input submit
+
+                    }// .buttons
+
+                }// .listagem-carrinho
+
+                
+                
+                .oferta-especial {display: none;}
+
+            }// article
+
+        }// .container
+
+        .aproveite {
+            width: 100%;
+            .left;
+            .respiro(0px, 0px, 0, 0);
+            background-color: transparent;
+            
+        }// .aproveite
+
+    }// #carrinho
+
+
+    /*
+     ************************************************************************************************************************************
+     * =PRESENTE
+     ************************************************************************************************************************************
+    */
+
+    #presente {
+
+        .container {
+            .respiro(20px, 20px, 26px, 26px);
+
+            .lista-presentes {
+
+                .item {
+                    width: 100%;
+                    .left;
+                    .respiro(0, 20px, 0, 0);
+                    margin-bottom: 20px;
+                    border-bottom: 1px solid #ccc;
+                    
+                    .produto {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 20px;
+
+                        figure {
+                            .calc(width, ~'50% - 5px');
+                            .left;
+                            margin-right: 10px;
+
+                        }// figure
+
+                        .info {
+                            .calc(width, ~'50% - 5px');
+                            .left;
+                            
+                            h3 {
+                                width: 100%;
+                                .rotis-serif-bold;
+                                font-size: 18px;
+                                margin-bottom: 5px;
+
+                            }// h3
+
+                            .autor {
+                                .rotis-ss-std-italic;
+                                font-size: 16px;
+                                display: block;
+                                margin-bottom: 20px;
+                            
+                            }// .autor
+
+                            .presente {
+                                width: 100%;
+                                
+                                label {
+                                    width: 100%;
+                                    display: block;
+
+                                    input[type=checkbox] {
+                                        display: inline-block;
+                                        margin: 0;
+                                        margin-right: 5px;
+
+                                    }// input
+
+                                    p {
+                                        width: 84%;
+                                        font-size: 14px;
+                                        display: inline-block;
+                                        vertical-align: top;
+
+                                        strong {.rotis-ss-std-bold;}
+
+                                    }// p
+
+                                }// label
+
+                            }// .presente
+
+                        }// .info
+
+                    }// .produto
+
+                    .envio-msg {
+                        >p {
+                            .left;
+                            
+                            label {
+                                width: 100%;
+                                .left;
+                                .univers-std-ultra;
+                                .upper;
+                                font-size: 18px;
+                                .verde;
+                                margin-bottom: 13px;
+                            
+                            }// label
+
+                            input[type=text] {
+                                width: 100%;
+                                .left;
+                                height: 40px;
+                                text-indent: 10px;
+                                .box-sizing(border-box);
+                                border: 1px solid #ccc;
+
+                            }// input text
+
+                            textarea {
+                                width: 100%;
+                                .left;
+                                height: 82px;
+                                padding-left: 10px;
+                                .box-sizing(border-box);
+                                border: 1px solid #ccc;
+                                resize: none;
+                                margin-bottom: 20px;
+
+                            }// input text
+
+                            span {
+                                .right;
+                                strong {.verde;}
+
+                            }
+
+                        }// >p
+                        
+                        .nome-presenteado {
+                            width: 100%; 
+                            margin-right: 0;
+
+                        }
+
+                        .mensagem-presenteado {width: 100%;}
+                    
+                    }// .envio-msg
+
+                    
+
+                }// .item
+
+                input[type=submit] {
+                    width: 255px;
+                    .btn;
+                    .branco;
+                    .bg-verde;
+                    .right;
+                    margin-bottom: 60px;
+                    border: 0;
+                    cursor: pointer;
+                    .trans();
+
+                    &:hover {.trans(); .bg-darken(@verde);}// hover
+
+                }// input submit
+                
+            }// .lista-presentes
+
+            
+
+            
+
+        }// .container
+
+    }// #presente
+
+}// @media only screen and (max-width : 767px)

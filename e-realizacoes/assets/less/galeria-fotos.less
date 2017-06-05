@@ -1,0 +1,252 @@
+/*
+ ************************************************************************************************************************************
+ * =GALERIA DE FOTOS
+ ************************************************************************************************************************************
+*/
+
+#galeria-fotos {
+
+    .container {
+        .respiro();
+
+        article {
+            width: 100%;
+            .left;
+            
+            .content {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+
+                .assunto-galeria {
+                    .calc(width, ~'50% - 30px');
+                    .left;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid #ccc;
+                    margin-bottom: 40px;
+                    margin-right: 30px;
+
+                    &:nth-child(2n+2) {margin-right: 0;}
+
+                    h2 {
+                        width: 100%;
+                        .rotis-serif-bold;
+                        font-size: 22px;
+                        text-transform: none;
+                    }
+
+                    figure {
+                        width: 255px;
+                        .left;
+                        margin-right: 30px;
+                    }
+                    
+                    .info {
+                        width: 235px;
+                        .left;
+
+                        h3 {
+                            .rotis-ss-std-bold;
+                            font-size: 16px;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            font-size: 16px; 
+                            margin-bottom: 10px;
+
+                            strong {.rotis-ss-std-bold;}
+
+                        }// p
+
+                        .btn {
+                            .respiro(0, 0, 30px, 30px);
+                            .branco;
+                            .bg-laranja;
+
+                            &:hover {.bg-darken(@laranja);}
+
+                        }// .btn
+
+                    }// .info
+
+                }// .assunto-galeria
+
+            }// .content
+
+        }// article
+        
+    }// .container
+
+}// #galeria-fotos
+
+.lightbox-galeria {
+    width: 1110px;
+    height: 637px;
+    position: fixed;
+    top: 63px;
+    left: 50%;
+    .translateX(-50%);
+    z-index: 9951;
+    display: none;
+
+    
+    .destaque {
+        width: 100%;
+        margin-bottom: 20px;
+        .left;
+        .rotis-serif-bold;
+        font-size: 22px;
+        .branco;
+    
+    }// .destaque
+
+    .fechar {
+        .size(28);
+        line-height: 24px;
+        .round(50%);
+        border: 2px solid #2b9f6b;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        font-size: 18px;
+        .branco;
+        cursor: pointer;
+    
+    }// .fechar
+
+    .fotorama {
+        margin-top: 20px !important;
+
+        .fotorama__thumb-border {border-color: @verde;}
+    }
+
+}// .lightbox-galeria
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =GALERIA DE FOTOS
+     ************************************************************************************************************************************
+    */
+
+    #galeria-fotos {
+
+        .container {
+            width: 100%;
+            .respiro(40px, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+            width: 100%;
+            .left;
+            
+            .content {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+
+                .assunto-galeria {
+                    width: 100%;
+                    margin-right: 0;
+
+                    .info {width: 50%;}
+
+                }// .assunto-galeria
+
+            }// .content
+
+        }// article
+            
+        }// .container
+
+    }// #galeria-fotos
+
+    .lightbox-galeria {width: 96%;}
+
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =GALERIA DE FOTOS
+     ************************************************************************************************************************************
+    */
+
+    #galeria-fotos {
+
+        .container {
+            width: 100%;
+            .respiro(20px, 20px, 26px, 26px);
+            .box-sizing(border-box);
+
+            article {
+            width: 100%;
+            .left;
+            
+            .content {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+
+                .assunto-galeria {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+
+                    h2 {font-size: 15px; .rotis-ss-std;}
+
+                    figure {
+                        width: 100%;
+                        margin-bottom: 10px;
+
+                        img {width: 100%; height: auto;}
+                    }
+
+                    .info {
+                        width: 100%;
+
+                        h3 {font-size: 14px;}
+                        
+                        p {font-size: 14px;}
+                    }
+
+                }// .assunto-galeria
+
+            }// .content
+
+        }// article
+            
+        }// .container
+
+    }// #galeria-fotos
+
+    .lightbox-galeria {
+        width: 96%; 
+        top: 10px;
+        
+        .destaque {font-size: 15px; .rotis-ss-std;}
+    }
+
+
+}// @media only screen and (max-width : 767px)

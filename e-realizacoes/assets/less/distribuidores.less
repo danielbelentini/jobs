@@ -1,0 +1,371 @@
+/*
+ ************************************************************************************************************************************
+ * =DISTRIBUIDORES
+ ************************************************************************************************************************************
+*/
+
+#distribuidores {
+    .rotis-ss-std-bold;
+    
+    .container {
+        
+        header {margin-top: 40px;}
+
+        article {
+            width: 100%;
+            float: left;
+            margin-bottom: 60px;
+
+            h2 {font-size: 25px;}
+
+            h3 {
+                font-size: 20.5px;
+                .univers-std-ultra;
+                .upper;
+                .verde;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #dfdfdf;
+                margin-bottom: 30px;
+
+            }// h3
+
+            h4 {.verde;}
+
+            > div {width: 100%; .left;}
+
+            .lojas-virtuais {
+                border-bottom: 1px solid #dfdfdf;
+                margin-bottom: 30px;
+
+                ul {
+                    width: 100%;
+                    .left;
+
+                    li {
+                        .calc(width, ~'25% - 30px');
+                        margin-right: 30px;
+                        margin-bottom: 30px;
+                        .left;
+
+                        p {
+                            width: 100%;
+                            .left;
+
+                            strong {display: block;}
+                        
+                        }// p
+
+                    }// li
+
+                }// ul
+            
+            }// .lojas-virtuais
+
+            .lojas-fisicas {
+
+                
+                
+                .filtro {
+                    width: 100%;
+                    .left;
+
+                    p {
+                        .left; 
+                        margin-right: 22px;
+                        margin-top: 12px;
+                    }
+
+                    select {
+                        width: 445px;
+                        height: 41px;
+                        line-height: 41px;
+                        .box-sizing(border-box);
+                        border: 1px solid #ccc;
+                        padding-left: 10px;
+                        .cinza-escuro;
+                        font-size: 14px;
+                        .rotis-ss-std-bold;
+                        .placeholder(@cinza-escuro);
+                        background-color: transparent;
+                        .left;
+                        margin-right: 30px;
+                    
+                    }// select
+
+                    .opts {
+                        width: 350px;
+                        height: 41px;
+                        .left;
+                        .box-sizing(border-box);
+                        border-left: 1px solid #dfdfdf;
+                        padding-left: 30px;
+                        padding-top: 12px;
+                        margin-bottom: 30px;
+
+                        label {
+                            .calc(width, ~'50% - 10px');
+                            .left;
+
+                            input[type=checkbox] {
+                                display: inline-block;
+                                margin: 0;
+                                margin-right: 10px;
+                            
+                            }// input checkbox
+                        
+                        }// label
+
+                    }// .opts
+
+                }// .filtro
+
+                .lista-lojas {
+
+                    ul {
+                        width: 100%;
+                        .left;
+
+                        li {
+                            .calc(width, ~'33.33% - 50px');
+                            margin-right: 50px;
+                            margin-bottom: 30px;
+                            .left;
+                            position: relative;
+
+                            &:nth-child(3n+3) {margin-right: 0;}
+
+                            span {
+                                width: 95px;
+                                height: 27px;
+                                line-height: 23px;
+                                
+                                .upper;
+                                .round(2);
+                                .box-sizing(border-box);
+                                
+                                position: absolute;
+                                top: 0; 
+                                right: 0;
+                                text-align: center;
+                                z-index: 1;
+
+                                &.livraria {.verde; border: 2px solid @verde;}
+                                &.distribuidor {.laranja; border: 2px solid @laranja;}
+                            }
+
+                        }// li
+
+                    }// ul
+
+                }// .lista-lojas
+
+            }// .lojas-fisicas
+        
+        }// article
+
+    }// .container
+    
+}// #distribuidores
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+    
+    /*
+     ************************************************************************************************************************************
+     * =DISTRIBUIDORES
+     ************************************************************************************************************************************
+    */
+
+    #distribuidores {
+        .rotis-ss-std-bold;
+        
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 10px, 10px);
+            .box-sizing(border-box);
+            
+            article {
+                
+                .lojas-virtuais {ul {li {.calc(width, ~'33% - 30px');}}}
+
+                .lojas-fisicas {
+                                        
+                    
+                    .filtro {
+                        width: 100%;
+                        .left;
+
+                        p {width: 100%; margin-bottom: 10px;}
+
+                        select {width: 47%;}
+
+                    }// .filtro
+
+                    .lista-lojas {
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                .calc(width, ~'50% - 50px');
+                                margin-right: 50px;
+                                margin-bottom: 30px;
+                                .left;
+                                position: relative;
+
+                                &:nth-child(3n+3) {margin-right: 50px;}
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista-lojas
+
+                }// .lojas-fisicas
+            
+            }// article
+
+        }// .container
+        
+    }// #distribuidores
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+    
+    /*
+     ************************************************************************************************************************************
+     * =DISTRIBUIDORES
+     ************************************************************************************************************************************
+    */
+
+    #distribuidores {
+                
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 26px, 26px);
+            .box-sizing(border-box);
+
+            header {margin-top: 20px; }
+
+            h2 {
+                font-size: 18px; 
+                .univers-std-ultra;
+                margin-bottom: 15px;
+
+            }
+            
+            article {
+                
+                .lojas-virtuais {margin-bottom: 20px; ul {li {width: 100%;}}}
+
+                .lojas-fisicas {
+                                        
+                    
+                    .filtro {
+                        width: 100%;
+                        .left;
+
+                        p {width: 100%; margin-bottom: 10px;}
+
+                        select {width: 100%;}
+
+                        .opts {
+                            width: 100%;
+                            border-left: none;
+                            padding-left: 0;
+                            padding-top: 12px;
+                            margin-bottom: 30px;
+
+                            label {
+                                .calc(width, ~'50% - 10px');
+                                .left;
+
+                                input[type=checkbox] {
+                                    display: inline-block;
+                                    margin: 0;
+                                    margin-right: 10px;
+                                    position: relative;
+                                    top: 2px;
+                                
+                                }// input checkbox
+
+                                span {
+                                    font-size: 12px;
+                                    vertical-align: top;
+                                }
+                            
+                            }// label
+
+                        }// .opts
+
+                    }// .filtro
+
+                    .lista-lojas {
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 20px;
+                                .left;
+                                position: relative;
+
+                                &:nth-child(3n+3) {margin-right: 0;}
+
+                                h4, p {width: 100%; .left;}
+
+                                span {
+                                    width: 95px;
+                                    height: 27px;
+                                    line-height: 23px;
+                                    .left;
+                                    margin-bottom: 10px;
+
+                                    .upper;
+                                    .round(2);
+                                    .box-sizing(border-box);
+                                    
+                                    position: static;
+                                    top: 0; 
+                                    right: 0;
+                                    text-align: center;
+                                    z-index: 1;
+
+                                    &.livraria {.verde; border: 2px solid @verde;}
+                                    &.distribuidor {.laranja; border: 2px solid @laranja;}
+                                }
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista-lojas
+
+                }// .lojas-fisicas
+            
+            }// article
+
+        }// .container
+        
+    }// #distribuidores
+
+}// @media only screen and (max-width : 767px)

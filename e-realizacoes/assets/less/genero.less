@@ -1,0 +1,659 @@
+/*
+ ************************************************************************************************************************************
+ * =GÊNERO
+ ************************************************************************************************************************************
+*/
+
+#genero {
+
+    .container {
+        .respiro();
+
+        article {
+            width: 100%;
+            
+            .filtros {
+                width: 160px;
+                float: left;
+                .box-sizing(border-box);
+                .bg-cinza-claro;
+                .respiro(20px, 20px, 0, 0); 
+
+                .respiro {
+                    .respiro(0, 0, 20px, 5px);
+
+                    h2 {
+                        font-size: 14px;
+                        .rotis-semi-bold;
+                        margin-bottom: 30px;
+                    }
+
+                    dl {
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 30px;
+
+                        dt {
+                            .verde;
+                            .rotis-semi-bold;
+                            margin-bottom: 15px;
+                        }
+
+                        dd {
+                            .upper;
+
+                            a {
+                                .size(12);
+                                line-height: 14px;
+                                font-size: 8.26px;
+                                display: inline-block;
+                                .branco;
+                                .bg-verde;
+                                .round(50%);
+                                .rotis-semi-bold;
+                                text-align: center;
+                                position: relative;
+                                top: -2px;
+                                margin-left: 5px;
+
+                                &:hover {.bg-darken(@verde);}
+
+                            }// a
+
+                        }// dd
+
+                    }// dl
+
+                }// .respiro
+
+                form {
+                    width: 100%;
+                    min-height: 100%;
+                    .rotis-semi-bold;
+
+                    fieldset {
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 30px;
+                        
+                        legend {
+                            width: 100%;
+                            float: left;
+                            font-size: 14px;
+                            .verde;
+                            margin-bottom: 14px;
+
+                        }// legend
+
+                        label {
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 10px;
+                            .cinza-beast;
+                            font-size: 13px;
+
+                            input[type=checkbox] {
+                                margin: 0;
+                                margin-right: 6px;
+                                float: left;
+                            
+                            }
+
+                            p {
+                                max-width: 112px; 
+                                float: left;
+                                letter-spacing: -0.5px;
+                            }
+
+                        }// label
+
+                        .sub {
+                            width: 100%;
+                            float: left;
+                            .box-sizing(border-box);
+                            padding-left: 15px;
+                        }
+
+                        &.faixa-preco {
+
+                            .barra {
+                                width: 118px;
+                                height: 2px;
+                                .bg-cinza;
+                                float: left;
+                                position: relative;
+                                margin-bottom: 10px;
+
+                                .ui-slider-range {
+                                    width: 100%;
+                                    height: 2px;
+                                    position: absolute;
+                                    .bg-cinza-beast;
+
+                                }
+
+                                .ui-slider-handle {
+                                    width: 9px;
+                                    height: 14px;
+                                    display: block;
+                                    .bg-verde;
+                                    position: absolute;
+                                    top: -7px;
+                                    .box-sizing(border-box);
+                                    text-align: center;
+                                    .transition(none);
+
+                                    &:before {
+                                        content: '';
+                                        width: 3px;
+                                        height: 6px;
+                                        line-height: 14px;
+                                        display: inline-block;
+                                        .spt;
+                                        background-position: -157px -24px;
+                                    }
+
+                                    &:hover {.bg-darken(@verde);}
+                                }
+
+                                
+
+                            }// .barra
+
+                            input[type=text] {
+                                position: relative;
+                                float: left;
+                                width: 100%;
+                                border: 0;
+                                .rotis-semi-bold;
+                                font-size: 12px;
+                                background-color: transparent;
+                            }
+
+                        }// &.faixa-preco
+
+                        input[type=submit] {
+                            width: 119px;
+                            .btn;
+                            border: 0;
+                            .bg-laranja;
+                            .branco;
+                            .trans();
+
+                            &:hover {
+                                .bg-darken(@laranja);
+                                .trans();
+                                cursor: pointer;
+                            }
+                        }
+
+                    }// fieldset
+                
+                }// form
+
+                .sep {
+                    width: 100%;
+                    .box-sizing(border-box);
+                    float: left;
+                    border-top: 1px solid #d3d3d3;
+                    .respiro(20px, 0, 0, 0);
+                    text-align: center;
+                }
+                
+            }// .filtros
+
+            .content {
+                width: 920px;
+                float: right;
+
+                .wrapper {
+                    &:first-child {margin-bottom: 40px;}
+
+                    &.sep {
+                        width: 100%;
+                        .box-sizing(border-box);
+                        .left;
+                        border-bottom: 1px solid #d3d3d3;
+                        
+                    }// &.sep
+
+                    .destaque {
+                        .calc(width, ~'50% - 15px');
+                        .left;
+                        position: relative;
+
+                        &:last-child {.right;}
+
+                        figure {width: 160px; .left;}
+
+                        .info {
+                            width: 255px;
+                            min-height: 220px;
+                            padding-bottom: 35px;
+                            .box-sizing(border-box);
+                            position: relative;
+                            .right;
+                            
+                            h3 {
+                                width: 100%;
+                                margin-bottom: 10px;
+                                .rotis-serif-bold;
+                                font-size: 20px;
+                            
+                            }// h3
+
+                            .autor {
+                                .rotis-ss-std-italic;
+                                font-size: 16px;
+                                .cinza;
+                                display: block;
+                                margin-bottom: 17px;
+                            
+                            }// .autor
+
+                            .sinopse {
+                                width: 100%;
+                                min-height: 95px;
+                                float: left;
+                                margin-bottom: 10px;
+
+                            }// sinopse
+
+                            .precos {
+                                width: 115px;
+                                .left;
+
+                                .preco-anterior {
+                                    .rotis-serif-bold;
+                                    .cinza;
+                                    font-size: 18px;
+                                    text-decoration: line-through;
+                                    margin-bottom: 8px;
+                                    
+                                }// .preco-anterior
+
+                                .preco-atual {
+                                    .preco-anterior;
+                                    .cinza-escuro;
+                                    font-size: 24px;
+                                    text-decoration: none;
+                                    margin-bottom: 0;
+                                    
+                                    
+                                }// .preco-atual
+
+                            }// .precos
+
+                            .buttons {
+                                width: 140px;
+                                min-height: 60px;
+                                position: static;
+                                .left;
+
+                                a {width: 100%; padding-left: 53px !important;}
+                            }
+                        
+                        }// .info
+
+                    }// .destaque
+
+                }// .wrapper
+
+                .ordena-pag {
+                    width: 100%;
+                    float: left;
+                    margin-bottom: 22px;
+
+                    form {
+                        width: 548px;
+                        .left;
+
+                        fieldset {
+                            .left;
+                            margin-right: 30px;
+
+                            label {
+                                display: inline-block;
+                                .rotis-semi-bold;
+                                .verde;
+                                margin-right: 20px;
+
+                            }// label
+
+                            select {
+                                height: 41px;
+                                display: inline-block;
+                                .box-sizing(border-box);
+                                .rotis-ss-std-bold;
+                                font-size: 14px;
+                                padding-left: 5px;
+
+                            }// select
+
+                            span {
+                                .rotis-semi-bold;
+                                font-size: 14px;
+                                display: inline-block;
+                                margin-left: 5px;
+                            }
+
+                        }// fieldset
+
+                    }// form
+
+                    .paginacao {
+                        margin-top: 6px;
+                        max-width: 400px;
+                        .right;
+
+                        > p {
+                            float: left;
+                            font-size: 14px;
+                            .rotis-semi-bold;
+                            .verde;
+                            margin-right: 20px;
+                            padding-top: 8px;
+                        }
+
+                        > a {
+                            .left;
+                            height: 26px;
+                            line-height: 26px;
+                            .rotis-ss-std-bold;
+                            font-size: 16px;
+                            .scale(0.7);
+                            letter-spacing: -3px;
+                        }
+
+                        ul {
+                            .left;
+
+                            li {
+                                width: 27px;
+                                height: 26px;
+                                .left;
+
+                                a {
+                                    .size(26);
+                                    line-height: 26px;
+                                    display: block;
+                                    text-align: center;
+                                    .round(50%);
+                                    .cinza-escuro;
+                                    .rotis-ss-std-bold;
+                                    font-size: 16px;
+
+                                    &.active, &:hover {.bg-verde; .branco;}
+                                }
+                            }
+                        }
+                    }
+
+                }// .ordena-pag
+
+                .lista-livros {
+                    ul {
+                        li {
+                            &:nth-child(5n+5) {margin-right: 0;}
+
+                            margin-bottom: 38px;
+
+                        }// li
+
+                    }// ul
+
+                }// .lista-livros
+
+            }// .content
+
+        }// article
+        
+    }// .container
+
+}// #genero
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+    
+    #genero {
+
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(40px, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+                
+                .filtros {
+                    .respiro(20px, 20px, 0, 0); 
+
+                    .respiro {
+                        .respiro(0, 0, 10px, 5px);
+
+                        h2 {margin-bottom: 20px;}
+
+                        dl {
+                            margin-bottom: 20px;
+
+                            dt {margin-bottom: 15px;}
+                        }// dl
+
+                    }// .respiro
+
+                    form {
+
+                        fieldset {legend {font-size: 12px;}}
+
+                        .sep {padding-top: 20px;}
+
+                    }// form
+                
+                }// .filtros
+
+                .content {
+                    width: 75%;
+                    
+                    .wrapper {
+                        &:first-child {margin-bottom: 40px;}
+
+                        .destaque {
+                            
+                            &:last-child {margin-left: 20px; .left !important;}
+
+                            figure {margin-bottom: 15px;}
+
+                            .info {.left !important;}
+
+                        }// .destaque
+
+                    }// .wrapper
+
+                    .ordena-pag {
+                        
+                        form {
+                            width: 100%; 
+                            margin-bottom: 20px;
+                            
+                            fieldset {
+                                
+                                &:last-child {
+                                    select {width: 85px;}
+                                }
+
+                            }
+                        }
+
+                        .paginacao {.left !important;}
+
+
+
+                    }// .ordena-pag
+
+                    .lista-livros {
+                        ul {
+                            width: 561px;
+                            
+                            li {
+                                &:nth-child(5n+5) {margin-right: 30px;}
+                                &:nth-child(3n+3) {margin-right: 0;}
+
+                                
+
+                                margin-bottom: 38px;
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista-livros
+
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #genero
+
+} //@media only screen and (max-width : 1139px)
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+    
+    #genero {
+
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(40px, 40px, 26px, 26px);
+            
+
+            article {
+                width: 100%;
+                
+                .filtros {display: none;}
+
+                .content {
+                    width: 100%;
+                    .left;
+                    
+                    .wrapper {
+                        &:first-child {margin-bottom: 20px;}
+
+                        &.sep {border-bottom: none;}
+
+                        .destaque {
+                            width: 100%;
+                            border-bottom: 1px solid #e4e4e4;
+                            padding-bottom: 20px;
+                            margin-bottom: 20px;
+                            .box-sizing(border-box);
+                            
+                            &:last-child {margin-left: 0; margin-bottom: 0; .left !important;}
+
+                            figure {
+                                .calc(width, ~'40% - 5px');
+                                margin-bottom: 15px;
+                                margin-right: 10px;
+                            }
+
+                            .info {
+                                .calc(width, ~'60% - 5px');
+                                .left !important;
+                                padding-bottom: 0;
+
+                                h3 {font-size: 14px;}
+
+                                .autor {font-size: 12px;}
+
+                                .sinopse {font-size: 11px;}
+
+                                .precos {
+                                    width: 100%;
+                                    
+                                    .preco-anterior {font-size: 14px;}
+
+                                    .preco-atual {font-size: 20px; margin-bottom: 15px;}
+                                }
+                            }
+
+                        }// .destaque
+
+                    }// .wrapper
+
+                    .ordena-pag {
+                        width: 100%;
+                        .box-sizing(border-box);
+                        border-bottom: 2px solid #e3e3e3;
+                        
+                        form {
+                            width: 100%; 
+                            margin-bottom: 20px;
+                            
+                            fieldset {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 10px;
+                                
+                                &:last-child {
+                                    select {width: 85px;}
+                                }
+
+                            }
+                        }
+
+                        .paginacao {
+                            .left !important;
+                             margin-bottom: 20px;
+                            
+                            ul {float: none;}
+                        }
+
+
+
+                    }// .ordena-pag
+
+                    .lista-livros {
+                        ul {
+                            width: 100%;
+                            
+                            li {
+                                &:nth-child(5n+5) {margin-right: 10px;}
+                                &:nth-child(3n+3) {margin-right: 10px;}
+                                &:nth-child(2n+2) {margin-right: 0 !important;}
+
+                                
+
+                                margin-bottom: 38px;
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista-livros
+
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #genero
+
+} //@media only screen and (max-width : 767px)

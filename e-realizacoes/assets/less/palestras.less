@@ -1,0 +1,567 @@
+/*
+ ************************************************************************************************************************************
+ * =PALESTRAS
+ ************************************************************************************************************************************
+*/
+
+#palestras {
+
+    .container {
+        .respiro();
+
+        article {
+            width: 100%;
+            .left;
+            
+            .content {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+
+                .palestra {
+                    width: 100%;
+                    .left;
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid #ccc;
+                    margin-bottom: 40px;
+
+                    h2 {
+                        width: 100%;
+                        .rotis-serif-bold;
+                        font-size: 22px;
+                        text-transform: none;
+                    }
+
+                    figure {
+                        width: 255px;
+                        .left;
+                        margin-right: 30px;
+                    
+                    }// figure
+
+                    .info {
+                        width: 253px;
+                        .left;
+                        margin-right: 30px;
+                        font-size: 16px;
+
+                        .palestrante {.rotis-ss-std-bold;}
+
+                        p {line-height: 120%; strong {.rotis-ss-std-bold;}}
+                        
+                        .btn {
+                            .respiro(0, 0, 40px, 40px);
+                            .branco;
+                            .bg-laranja;
+                            .left;
+                            margin-top: 20px;
+
+                            &:hover {.bg-darken(@laranja);}
+                        
+                        }// .btn
+
+                    }// .info
+
+                    .obras {
+                        width: 540px;
+                        .left;
+
+                        .destaque {
+                            .rotis-ss-std-bold;
+                            .verde;
+                            .upper;
+                            margin-bottom: 20px;
+                        }
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                width: 215px;
+                                .left;
+                                margin-right: 65px;
+
+                                &:last-child {margin-right: 0;}
+
+                                figure {
+                                    width: 95px;
+                                    .left;
+                                    margin-right: 20px;
+                                }
+
+                                .livro {
+                                    width: 100px;
+                                    .left;
+                                    font-size: 16px;
+                                    .rotis-serif-bold;
+                                    margin-bottom: 15px;
+
+                                }// .livro
+
+                                .autor {
+                                    width: 100px;
+                                    .left;
+                                    font-size: 16px;
+                                    margin-bottom: 15px;
+
+                                    a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                }// .autor
+
+                            }// li
+
+                        }// ul
+
+                    }// .obras
+
+                }// .palestra
+
+                .palestra-interna {
+                    width: 100%;
+                    .left;
+                    margin-bottom: 40px;
+
+                    h2 {
+                        width: 100%;
+                        .rotis-serif-bold;
+                        font-size: 22px;
+                        text-transform: none;
+                    }
+
+                    figure {
+                        width: 255px;
+                        .left;
+                        margin-right: 30px;
+                    
+                    }// figure
+
+                    .info {
+                        width: 253px;
+                        .left;
+                        margin-right: 30px;
+                        font-size: 16px;
+
+                        .palestrante {.rotis-ss-std-bold;}
+
+                        p {line-height: 120%; strong {.rotis-ss-std-bold;}}
+                        
+                        .btn {
+                            .respiro(0, 0, 40px, 40px);
+                            .branco;
+                            .bg-laranja;
+                            .left;
+                            margin-top: 20px;
+
+                            &:hover {.bg-darken(@laranja);}
+                        
+                        }// .btn
+
+                    }// .info
+
+                    .obras {
+                        width: 540px;
+                        .left;
+
+                        .destaque {
+                            .rotis-ss-std-bold;
+                            .verde;
+                            .upper;
+                            margin-bottom: 20px;
+                        }
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                width: 215px;
+                                .left;
+                                margin-right: 65px;
+
+                                &:last-child {margin-right: 0;}
+
+                                figure {
+                                    width: 95px;
+                                    .left;
+                                    margin-right: 20px;
+                                }
+
+                                .livro {
+                                    width: 100px;
+                                    .left;
+                                    font-size: 16px;
+                                    .rotis-serif-bold;
+                                    margin-bottom: 15px;
+
+                                }// .livro
+
+                                .autor {
+                                    width: 100px;
+                                    .left;
+                                    font-size: 16px;
+                                    margin-bottom: 15px;
+
+                                    a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                }// .autor
+
+                            }// li
+
+                        }// ul
+
+                    }// .obras
+                    
+                    .detalhes {
+                        width: 100%;
+                        .left;
+                        margin-top: 40px;
+
+                        .texto {
+                            .calc(width, ~'50% - 30px');
+                            .left;
+                            margin-right: 30px;
+                        }
+
+                        .video {
+                            .calc(width, ~'50% - 30px');
+                            .left;
+                        }
+                    }
+
+                }// .palestra-interna
+            
+            }// .content
+
+        }// article
+        
+    }// .container
+
+}// #palestras
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =PALESTRAS
+     ************************************************************************************************************************************
+    */
+
+    #palestras {
+
+        .container {
+            width: 100%;
+           .respiro(40px, 40px, 10px, 10px);
+           .box-sizing(border-box);
+
+            article {
+                                
+                .content {
+                    
+                    .palestra {
+
+                        figure {margin-bottom: 30px;}
+
+                        .info {margin-bottom: 30px;}
+
+                    }// .palestra
+
+                    .palestra-interna {
+                        figure {margin-bottom: 30px;}
+
+                        .info {margin-bottom: 30px;}
+
+                        .detalhes {
+                            
+                            .texto {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 30px;
+                            
+                            }// .texto
+
+                            .video {
+                                width: 80%;
+                                text-align: center;
+                                float: none;
+                                margin: 0 auto;
+                            
+                            }// .video
+
+                        }// .detalhes
+
+                    }// .palestra-interna
+                
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #palestras
+
+}// @media only screen and (max-width : 1139px)
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =PALESTRAS
+     ************************************************************************************************************************************
+    */
+
+    #palestras {
+
+        .container {
+            .respiro(20px, 20px, 26px, 26px);
+
+            article {
+                                
+                .content {
+                    
+                    .palestra {
+                        width: 100%;
+                        .left;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #ccc;
+                        margin-bottom: 20px;
+
+                        h2 {
+                            width: 100%;
+                            .rotis-serif-bold;
+                            font-size: 15px;
+                            text-transform: none;
+                        }
+
+                        figure {
+                            width: 100%;
+                            .left;
+                            margin-right: 0;
+
+                            img {width: 100%; height: auto;}
+                        
+                        }// figure
+
+                        .info {
+                            width: 100%;
+                            margin-right: 0;
+                            font-size: 14px;
+
+                            .palestrante {.rotis-ss-std-bold;}
+
+                            p {line-height: 120%; strong {.rotis-ss-std-bold;}}
+                            
+                            .btn {
+                                width: 100%;
+                                .respiro(0, 0, 0, 0);
+                                text-align: center;
+                                margin-top: 20px;
+
+                                &:hover {.bg-darken(@laranja);}
+                            
+                            }// .btn
+
+                        }// .info
+
+                        .obras {
+                            width: 100%;
+                            .left;
+
+                            .destaque {
+                                .rotis-ss-std-bold;
+                                .verde;
+                                .upper;
+                                margin-bottom: 20px;
+                            }
+
+                            ul {
+                                width: 100%;
+                                .left;
+
+                                li {
+                                    width: 100%;
+                                    .left;
+                                    margin-right: 65px;
+
+                                    &:last-child {margin-right: 0;}
+
+                                    figure {
+                                        .calc(width, ~'50% - 7.5px');
+                                        max-width: 160px;
+                                        .left;
+                                        margin-right: 15px;
+                                    }
+
+                                    .livro {
+                                        .calc(width, ~'50% - 7.5px');
+                                        .left;
+                                        font-size: 16px;
+                                        .rotis-serif-bold;
+                                        margin-bottom: 15px;
+
+                                    }// .livro
+
+                                    .autor {
+                                        .calc(width, ~'50% - 7.5px');
+                                        .left;
+                                        font-size: 16px;
+                                        margin-bottom: 15px;
+
+                                        a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                    }// .autor
+
+                                }// li
+
+                            }// ul
+
+                        }// .obras
+
+                    }// .palestra
+
+                    .palestra-interna {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 40px;
+
+                        h2 {
+                            width: 100%;
+                            .rotis-serif-bold;
+                            font-size: 15px;
+                            text-transform: none;
+                        }
+
+                        figure {
+                            width: 100%;
+                            .left;
+                            margin-right: 0;
+
+                            img {width: 100%; height: auto;}
+                        
+                        }// figure
+
+                        .info {
+                            width: 100%;
+                            margin-right: 0;
+                            font-size: 14px;
+
+                            .palestrante {.rotis-ss-std-bold;}
+
+                            p {line-height: 120%; strong {.rotis-ss-std-bold;}}
+                            
+                            .btn {
+                                width: 100%;
+                                .respiro(0, 0, 0, 0);
+                                text-align: center;
+                                margin-top: 20px;
+
+                                &:hover {.bg-darken(@laranja);}
+                            
+                            }// .btn
+
+                        }// .info
+
+                        .obras {
+                            width: 100%;
+                            .left;
+
+                            .destaque {
+                                .rotis-ss-std-bold;
+                                .verde;
+                                .upper;
+                                margin-bottom: 20px;
+                            }
+
+                            ul {
+                                width: 100%;
+                                .left;
+
+                                li {
+                                    width: 100%;
+                                    .left;
+                                    margin-right: 65px;
+
+                                    &:last-child {margin-right: 0;}
+
+                                    figure {
+                                        .calc(width, ~'50% - 7.5px');
+                                        max-width: 160px;
+                                        .left;
+                                        margin-right: 15px;
+                                    }
+
+                                    .livro {
+                                        .calc(width, ~'50% - 7.5px');
+                                        .left;
+                                        font-size: 16px;
+                                        .rotis-serif-bold;
+                                        margin-bottom: 15px;
+
+                                    }// .livro
+
+                                    .autor {
+                                        .calc(width, ~'50% - 7.5px');
+                                        .left;
+                                        font-size: 16px;
+                                        margin-bottom: 15px;
+
+                                        a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                    }// .autor
+
+                                }// li
+
+                            }// ul
+
+                        }// .obras
+                        
+                        .detalhes {
+                            width: 100%;
+                            .left;
+                            margin-top: 0;
+
+                            .texto {
+                                width: 100%;
+                                .left;
+                                margin-right: 0;
+
+                                p {margin-bottom: 15px;}
+                            }
+
+                            .video {
+                                width: 100%;
+                                .left;
+
+                                iframe {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                    }// .palestra-interna
+                
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #palestras
+
+}// @media only screen and (max-width : 767px)

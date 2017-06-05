@@ -1,0 +1,1185 @@
+/*
+ ************************************************************************************************************************************
+ * =PAGAMENTO
+ ************************************************************************************************************************************
+*/
+
+#pagamento {
+   
+   h2 {.univers-std-lt-ultra;}
+
+    input[type=text], select {
+        border: 1px solid #ccc;
+        height: 40px;
+        text-indent: 10px;
+        .box-sizing(border-box);
+        margin-bottom: 20px;
+
+    }// input text, select
+    
+    .container {
+
+        .box {
+            width: 100%;
+            .bg-cinza-claro;
+            .respiro(20px, 20px, 20px, 20px);
+            .box-sizing(border-box);
+
+        }// .box
+        
+        .content  {
+            width: 730px;
+            margin-right: 30px;
+            padding-bottom: 60px;
+            .left;
+            
+            .wrapper {
+                width: 100%;
+                .left;
+                .respiro(40px, 40px, 0, 0);
+                border-bottom: 1px solid #ccc;
+
+                &:first-child {.respiro(0, 40px, 0, 0);}
+
+                .endereco-entrega {
+                    .calc(width, ~'50% - 15px');
+                    .left;
+                    margin-right: 30px;
+
+                    .box {
+                        height: 137px;
+                        .respiro(30px, 30px, 30px, 30px);
+
+                        .endereco {
+                            width: 166px;
+                            .left;
+
+                            h3 {
+                                .verde;
+                                .upper;
+                                .rotis-ss-std-bold;
+
+                            }// h3
+
+                            p {display: block;}
+
+                        }// .endereco
+
+                        .entregar-outro {
+                            width: 113px;
+                            height: 40px;
+                            padding-top: 2px;
+                            .left;
+                            text-align: center;
+                            .branco;
+                            .upper;
+                            font-size: 14px;
+                            .bg-cinza-escuro;
+                            .box-sizing(border-box);
+                        }
+
+                    }// .box
+                
+                }// .endereco-entrega
+
+                .tipo-entrega {
+                    .calc(width, ~'50% - 15px');
+                    .left;
+                    
+                    .box {
+                        height: 137px;
+                        .respiro(30px, 30px, 30px, 30px);
+
+                        .tipo {
+                            width: 100%;
+                            .left;
+                            margin-bottom: 20px;
+
+                            label {
+                                width: 100px;
+                                .left;
+
+                                input[type="radio"] {
+                                    margin: 0;
+                                    margin-right: 10px;
+                                    display: inline-block;
+                                    vertical-align: middle;
+
+                                }// input radio
+                                
+                                span {
+                                    display: inline-block; 
+                                    vertical-align: middle;
+                                    .rotis-ss-std-bold;
+                                }
+
+                            }// label
+
+                            p {
+                                .left;
+                                
+                                &.dias {width: 140px;}
+                                &.valor {width: 42px;}
+
+                            }// p
+
+                        }// .tipo
+
+                    }// .box
+                
+                }// .tipo-entrega
+
+                .cupons-descontos {
+                    width: 50%;
+                    .left;
+
+                    label {
+                        width: 100%;
+                        .left;
+                        .rotis-ss-std-bold;
+                        margin-bottom: 15px;
+
+                    }// label
+
+                    input[type=text] {
+                        width: 65.14%;
+                        margin-right: 5.71%;
+                        .left;
+
+                    }// input text
+
+                    input[type=button] {
+                        .btn;
+                        .respiro(0, 0, 23px, 23px);
+                        .bg-laranja;
+                        .branco;
+                        border: 0;
+                        .left;
+                        .trans();
+                        cursor: pointer;
+
+                        &:hover {.bg-darken(@laranja); .trans();}
+
+                    }// input button
+
+                }// .cupons-descontos
+
+                .pagamento-cartao {
+                    width: 100%;
+                    .left;
+                    position: relative;
+
+                    figure {
+                        position: absolute;
+                        top: 12px;
+                        right: 0;
+
+                    }// figure
+
+                    p {.rotis-ss-std-bold;}
+
+                    input, label {width: 100%; .left;}
+
+                    label {margin-bottom: 4px;}
+
+                    .parcelamento {
+                        width: 160px;
+                        .right;
+                        margin-bottom: 30px;
+                        
+                        label {width: 100%; .rotis-ss-std-bold;}
+                        select {width: 100%;}
+
+                    }// .parcelamento
+                    
+                    .dados-cartao {
+                        width: 100%; 
+                        .left;
+
+                        p {
+                            .left; 
+                            margin-bottom: 20px;
+                            margin-right: 30px;
+                        }
+
+                        .numero-cartao {
+                            width: 160px;
+
+                        }// .numero-cartao
+
+                        .nome-titular {
+                            width: 160px;
+
+                        }// .nome-titular
+
+                        .validade {
+                            width: 160px;
+
+                            input {
+                                .calc(width, ~'50% - 15px');
+                                margin-right: 30px;
+
+                                &:last-child {margin-right: 0;}
+                            }
+
+                        }// .validade
+
+                        .codigo-seguranca {
+                            width: 160px;
+                            margin-right: 0;
+
+                        }// .codigo-seguranca
+                    
+                    }// .dados-cartao
+
+                    input[type=submit] {
+                        width: 254px;
+                        .btn;
+                        .branco;
+                        .bg-verde;
+                        border: 0;
+                        .right;
+                        cursor: pointer;
+                        .trans();
+
+                        &:hover{.trans(); .bg-darken(@verde);}
+
+                    }// input submit
+
+                }// .pagamento-cartao
+
+                .pagamento-boleto {
+                    width: 100%;
+                    .left;
+
+                    .box {
+                        width: 100%;
+                        .left;
+                        .respiro(20px, 20px, 20px, 20px);
+
+                        p {
+                            width: 100%;
+                            .left;
+                            .box-sizing(border-box);
+                            padding-right: 75px;
+                            margin-bottom: 15px;
+
+                        }// p
+
+                        a {
+                            .btn;
+                            .branco;
+                            .bg-verde;
+                            .right;
+                            .respiro(0, 0, 24px, 24px);
+                            .trans();
+
+                            &:hover{.trans(); .bg-darken(@verde);}
+
+                        }// a
+
+                    }// .box
+
+                }// .pagamento-boleto
+
+            }// .wrapper
+
+            .pagamento-transferencia {
+                width: 100%;
+                .left;
+                margin-top: 30px;
+
+                .box {
+                    width: 100%;
+                    .left;
+                    .respiro(20px, 20px, 20px, 20px);
+
+                    p {
+                        width: 100%;
+                        .left;
+                        .box-sizing(border-box);
+                        padding-right: 75px;
+                        margin-bottom: 15px;
+
+                    }// p
+
+                    a {
+                        .btn;
+                        .branco;
+                        .bg-verde;
+                        .right;
+                        .respiro(0, 0, 24px, 24px);
+                        .trans();
+
+                        &:hover{.trans(); .bg-darken(@verde);}
+
+                    }// a
+
+                }// .box
+
+            }// .pagamento-boleto
+
+            
+            // CONFIRMAÇÃO
+
+            .informacoes {
+                width: 100%;
+                .left;
+
+                h2 {
+                    .preto;
+                    padding-bottom: 18px;
+                    border-bottom: 1px solid #ccc;
+                    margin: 0;
+
+                    strong {.univers-std-ultra; .verde;}
+
+                }// h2
+
+                p {
+                    width: 100%;
+                    .left;
+                    .box-sizing(border-box);
+                    font-size: 16px;
+                    .respiro(40px, 40px, 0, 80px);
+                    border-bottom: 1px solid #ccc;
+                    line-height: 120%;
+                }
+
+            }// .informacoes
+
+            .status-pedido {
+                width: 100%;
+                .left;
+                margin-top: 40px;
+
+                h2 {.univers-std-ultra;}
+
+                ul {
+                    width: 100%;
+                    .left;
+
+                    li {
+                        width: 160px;
+                        .left;
+                        margin-right: 30px;
+
+                        &:last-child {margin-right: 0;}
+
+                        >p {
+                            width: 123px;
+                            .left;
+                            margin-top: 8px;
+                            margin-bottom: 15px;
+
+                            strong {
+                                .upper;
+                                .rotis-ss-std-bold;
+                            }
+
+                        }// p
+
+                        span {
+                            .size(30);
+                            line-height: 30px;
+                            font-size: 17px;
+                            text-align: center;
+                            .left;
+                            border: 1px solid #ddd;
+                            .round(50%);
+                            margin-right: 5px;
+                            .preto;
+                            .bg-branco;
+
+                        }// span
+
+                        &.active {span {border: 0; .bg-laranja; .branco;}}
+
+                        .btn {
+                            width: 100%;
+                            text-align: center;
+                            .bg-verde;
+                            .branco;
+                            .trans();
+                            .left;
+                            margin-bottom: 30px;
+
+                            &:hover {.trans(); .bg-darken(@verde);}
+
+                        }// .btn
+
+                        .via-transferencia {
+                            width: 100%;
+                            .left;
+                            
+                            p {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 15px;
+
+                                strong {.upper; .verde;}
+
+                            }//p
+
+                            ul {
+                                width: 100%;
+                                .left;
+
+                                li {
+                                    width: 31px;
+                                    height: 30px;
+                                    .left;
+                                    margin-right: 17px;
+
+                                    &:last-child {margin-right: 0;}
+
+                                    a {
+                                        width: 100%;
+                                        height: 100%;
+                                        .left;
+                                        background: url(../img/icon/bandeiras-bancos.png) 0 0 no-repeat;
+                                        .hide-text;
+
+                                        &.banco-itau {background-position: 0 0;}
+                                        &.banco-bradesco {background-position: -47px 0;}
+                                        &.banco-santander {background-position: -94px 0;}
+                                    }
+
+                                }// li
+                            
+                            }// ul
+
+                        }// .via-transferencia
+
+                    }// li
+
+                }// ul
+
+            }// .status-pedido
+
+        }// .content
+
+        .resumo-pedido {
+            width: 350px;
+            .right;
+            .bg-cinza-claro;
+            .box-sizing(border-box);
+            .respiro(20px, 20px, 20px, 20px);
+            margin-bottom: 60px;
+
+            h2 {font-size: 25px;}
+
+            table {
+                width: 100%;
+                .rotis-ss-std-bold;
+                
+                thead {
+                    
+                    tr {
+                        
+                        th {
+                            .rotis-ss-std-bold;
+                            font-size: 14px;
+                            .verde;
+                            .upper;
+                            text-align: left;
+
+                            &:first-child {width: 55.13%;}
+                            &:nth-child(2) {width: 20.51%;}
+
+                        }// th
+                        
+                    }// tr
+
+                }// thead
+
+                tbody {
+                    
+                    tr {
+                        border-bottom: 1px solid #c0c0c0;
+
+                        td {
+                            .respiro(20px, 20px, 0, 0);
+
+                            p {display: block; em {.rotis-ss-std-italic; display: block;}}
+
+                             &:first-child {padding-right: 40px;}
+
+                        }// td
+
+                    }// tr
+
+                }// tbody
+
+                tfoot {
+                    
+                    tr {
+                        
+                        th {width: 12.82%;
+                            text-align: left;
+                            font-size: 25px;
+                            .univers-std-lt-ultra;
+                            .upper;
+                            padding: 20px 0 20px;
+
+                            &.total {.verde;}
+
+                        }// th
+
+                        td {
+                            
+                            padding: 20px 0 20px; 
+
+                            &.total {
+                                font-size: 25px;
+                                .univers-std-lt-ultra;
+                                .upper;
+                                .cinza-beast;
+                            }
+                        }
+
+                        &.frete {border-bottom: 1px solid #c0c0c0;}
+
+                    }// tr
+
+                }// tfoot
+
+            }// table
+
+
+        }// .resumo-pedido
+
+    }// .container
+
+}// #pagamento
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+    
+    #pagamento {
+       
+       h2 {font-size: 25px;}
+
+       .container {
+           width: 100%;
+           .respiro(0, 40px, 10px, 10px);
+           .box-sizing(border-box);
+
+            .content  {
+                width: 100%;
+                margin-right: 0;
+                padding-bottom: 40px;
+                                
+                                
+                // CONFIRMAÇÃO
+
+                .informacoes {
+                    width: 100%;
+                    .left;
+
+                    h2 {
+                        .preto;
+                        padding-bottom: 18px;
+                        border-bottom: 1px solid #ccc;
+                        margin: 0;
+
+                        strong {.univers-std-ultra; .verde;}
+
+                    }// h2
+
+                    p {
+                        width: 100%;
+                        .left;
+                        .box-sizing(border-box);
+                        font-size: 16px;
+                        .respiro(40px, 40px, 0, 80px);
+                        border-bottom: 1px solid #ccc;
+                        line-height: 120%;
+                    }
+
+                }// .informacoes
+
+                .status-pedido {
+                    width: 100%;
+                    .left;
+                    margin-top: 40px;
+
+                    h2 {.univers-std-ultra;}
+
+                    ul {
+                        width: 100%;
+                        .left;
+
+                        li {
+                            width: 160px;
+                            .left;
+                            margin-right: 30px;
+
+                            &:last-child {margin-right: 0;}
+
+                            >p {
+                                width: 123px;
+                                .left;
+                                margin-top: 8px;
+                                margin-bottom: 15px;
+
+                                strong {
+                                    .upper;
+                                    .rotis-ss-std-bold;
+                                }
+
+                            }// p
+
+                            span {
+                                .size(30);
+                                line-height: 30px;
+                                font-size: 17px;
+                                text-align: center;
+                                .left;
+                                border: 1px solid #ddd;
+                                .round(50%);
+                                margin-right: 5px;
+                                .preto;
+                                .bg-branco;
+
+                            }// span
+
+                            &.active {span {border: 0; .bg-laranja; .branco;}}
+
+                            .btn {
+                                width: 100%;
+                                text-align: center;
+                                .bg-verde;
+                                .branco;
+                                .trans();
+                                .left;
+                                margin-bottom: 30px;
+
+                                &:hover {.trans(); .bg-darken(@verde);}
+
+                            }// .btn
+
+                            .via-transferencia {
+                                width: 100%;
+                                .left;
+                                
+                                p {
+                                    width: 100%;
+                                    .left;
+                                    margin-bottom: 15px;
+
+                                    strong {.upper; .verde;}
+
+                                }//p
+
+                                ul {
+                                    width: 100%;
+                                    .left;
+
+                                    li {
+                                        width: 31px;
+                                        height: 30px;
+                                        .left;
+                                        margin-right: 17px;
+
+                                        &:last-child {margin-right: 0;}
+
+                                        a {
+                                            width: 100%;
+                                            height: 100%;
+                                            .left;
+                                            background: url(../img/icon/bandeiras-bancos.png) 0 0 no-repeat;
+                                            .hide-text;
+
+                                            &.banco-itau {background-position: 0 0;}
+                                            &.banco-bradesco {background-position: -47px 0;}
+                                            &.banco-santander {background-position: -94px 0;}
+                                        }
+
+                                    }// li
+                                
+                                }// ul
+
+                            }// .via-transferencia
+
+                        }// li
+
+                    }// ul
+
+                }// .status-pedido
+
+            }// .content
+
+            .resumo-pedido {width: 100%;}
+
+        }// .container
+
+    }// #pagamento
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+    
+    /*
+     ************************************************************************************************************************************
+     * =PAGAMENTO
+     ************************************************************************************************************************************
+    */
+
+    #pagamento {
+       
+        h2 {
+            width: 100%;
+            .univers-std-ultra; 
+            font-size: 18px;
+
+        }// h2
+
+        .container {
+            .respiro(0, 0, 26px, 26px);
+
+            .box {
+                width: 100%;
+                overflow: hidden;
+                .bg-cinza-claro;
+                .respiro(20px, 20px, 20px, 20px);
+                .box-sizing(border-box);
+
+            }// .box
+
+            .btn {font-size: 18px;}
+            
+            .content  {
+                width: 100%;
+                margin-right: 0;
+                padding-bottom: 30px;
+
+
+                
+                .wrapper {
+                    .respiro(0, 0, 0, 0);
+                    border-bottom: none;
+
+                    &:first-child {.respiro(0, 40px, 0, 0);}
+
+                    .endereco-entrega {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+
+                        .box {
+                            height: 137px;
+                            .respiro(15px, 15px, 15px, 15px);
+
+                            .endereco {
+                                .calc(width, ~'50% - 5px');
+                                margin-right: 10px;
+                                .left;
+
+                                h3 {
+                                    .verde;
+                                    .upper;
+                                    .rotis-ss-std-bold;
+
+                                }// h3
+
+                                p {display: block;}
+
+                            }// .endereco
+
+                            .entregar-outro {
+                                .right;
+                                .univers-std-ultra;
+                                letter-spacing: 0.7px;
+                            }
+
+                        }// .box
+                    
+                    }// .endereco-entrega
+
+                    .tipo-entrega {
+                        width: 100%;
+                        .left;
+                        
+                        .box {
+                            height: auto;
+                            .respiro(15px, 15px, 15px, 15px);
+
+                            .tipo {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 20px;
+
+                                &:last-child {margin-bottom: 0;}
+
+                                label {
+                                    width: 70px;
+                                    .left;
+
+                                    input[type="radio"] {margin-right: 5px;}
+                                    
+                                }// label
+
+                                p {
+                                    .left;
+                                    
+                                    &.dias {width: 100px;}
+                                    &.valor {width: 42px;}
+
+                                }// p
+
+                            }// .tipo
+
+                        }// .box
+                    
+                    }// .tipo-entrega
+
+                    .cupons-descontos {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        .left;
+
+                        label {
+                            width: 100%;
+                            .left;
+                            .rotis-ss-std-bold;
+                            margin-bottom: 15px;
+
+                        }// label
+
+                        input[type=text] {
+                            width: 100%;
+                            margin-right: 0;
+                            
+
+                        }// input text
+
+                        input[type=button] {
+                            width: 100%;
+                            text-align: center;
+                            .respiro(0, 0, 0, 0);
+                        
+                        }// input button
+
+                    }// .cupons-descontos
+
+                    .pagamento-cartao {
+                        width: 100%;
+                        .left;
+                        position: relative;
+                        padding-bottom: 20px;
+                        border-bottom: 2px solid #e6e6e6;
+                        margin-bottom: 20px;
+
+                        h2 {margin-bottom: 102px;}
+
+                        figure {
+                            position: absolute;
+                            top: 95px;
+                            right: 0;
+
+                        }// figure
+
+                        p {.rotis-ss-std-bold;}
+
+                        input, label {width: 100%; .left;}
+
+                        label {margin-bottom: 4px;}
+
+                        .parcelamento {
+                            width: 100%;
+                            .left;
+                            margin-bottom: 30px;
+                            position: absolute;
+                            top: 30px;
+                            left: 0;
+                            z-index: 1;
+                        
+                        }// .parcelamento
+                        
+                        .dados-cartao {
+                            
+                            p {
+                                width: 100%;
+                                .left; 
+                                margin-bottom: 10px;
+                                margin-right: 0;
+
+                                input {margin-bottom: 0;}
+                            }
+
+                            .numero-cartao {
+                                width: 100%;
+
+                            }// .numero-cartao
+
+                            .nome-titular {
+                                width: 100%;
+
+                            }// .nome-titular
+
+                            .validade {
+                                width: 100%;
+
+                                input {
+                                    .calc(width, ~'50% - 7.5px');
+                                    margin-right: 15px;
+
+                                    &:last-child {margin-right: 0;}
+                                }
+
+                            }// .validade
+
+                            .codigo-seguranca {
+                                width: 100%;
+                                margin-right: 0;
+
+                            }// .codigo-seguranca
+                        
+                        }// .dados-cartao
+
+                        input[type=submit] {width: 100%; .left; font-size: 18px;}
+
+                    }// .pagamento-cartao
+
+                    .pagamento-boleto {
+                        width: 100%;
+                        .left;
+
+                        .box {
+                            width: 100%;
+                            .left;
+                            .respiro(20px, 20px, 20px, 20px);
+
+                            p {
+                                width: 100%;
+                                .left;
+                                .box-sizing(border-box);
+                                padding-right: 0;
+                                margin-bottom: 15px;
+
+                            }// p
+
+                            a {
+                                width: 100%;
+                                .respiro(0, 0, 0, 0);
+                                text-align: center;
+                                font-size: 18px;
+                            
+                            }// a
+
+                        }// .box
+
+                    }// .pagamento-boleto
+
+                }// .wrapper
+
+                .pagamento-transferencia {
+                    width: 100%;
+                    .left;
+                    margin-top: 30px;
+
+                    .box {
+                        width: 100%;
+                        .left;
+                        .respiro(20px, 20px, 20px, 20px);
+
+                        p {
+                            width: 100%;
+                            .left;
+                            .box-sizing(border-box);
+                            padding-right: 0;
+                            margin-bottom: 15px;
+
+                        }// p
+
+                        a {
+                            width: 100%;
+                            .respiro(0, 0, 0, 0);
+                            text-align: center;
+                            font-size: 18px;
+
+                        }// a
+
+                    }// .box
+
+                }// .pagamento-boleto
+
+                
+                // CONFIRMAÇÃO
+
+
+
+                .informacoes {
+                    width: 100%;
+                    .left;
+
+                    h2 {
+                        .preto;
+                        padding-bottom: 18px;
+                        border-bottom: 1px solid #ccc;
+                        margin: 0;
+
+                        strong {.univers-std-ultra; .verde;}
+
+                    }// h2
+
+                    p {
+                        width: 100%;
+                        .left;
+                        .box-sizing(border-box);
+                        font-size: 14px;
+                        .respiro(20px, 20px, 0, 0);
+                        border-bottom: 1px solid #ccc;
+                        line-height: 120%;
+                    }
+
+                }// .informacoes
+
+                .status-pedido {
+                    width: 100%;
+                    .left;
+                    margin-top: 20px;
+
+                    h2 {.univers-std-ultra;}
+
+                    ul {
+                        width: 100%;
+                        .left;
+
+                        li {
+                            width: 100%;
+                            .left;
+                            margin-right: 0;
+
+                            &:last-child {margin-right: 0;}
+
+                            >p {
+                                .calc(width, ~'100% - 40px');
+                                .left;
+                                .box-sizing(border-box);
+                                margin-top: 8px;
+                                margin-bottom: 15px;
+
+                                strong {display: block; }
+
+                            }// p
+
+                            span {
+                                .size(30);
+                                line-height: 30px;
+                                font-size: 17px;
+                                text-align: center;
+                                .left;
+                                border: 1px solid #ddd;
+                                .round(50%);
+                                margin-right: 5px;
+                                .preto;
+                                .bg-branco;
+
+                            }// span
+
+                            &.active {span {border: 0; .bg-laranja; .branco;}}
+
+                            .btn {
+                                width: 100%;
+                                text-align: center;
+                                .bg-verde;
+                                .branco;
+                                .trans();
+                                .left;
+                                margin-bottom: 30px;
+
+                                &:hover {.trans(); .bg-darken(@verde);}
+
+                            }// .btn
+
+                            .via-transferencia {
+                                width: 100%;
+                                margin-bottom: 20px;
+                                
+                                p {
+                                    width: 100%;
+                                    .box-sizing(border-box);
+                                    .left;
+                                    padding-left: 26px;
+                                    margin-bottom: 15px;
+
+                                    strong {width: 100%;.upper; .verde;}
+
+                                }//p
+
+                                ul {
+                                    width: 100%;
+                                    .box-sizing(border-box);
+                                    padding-left: 26px;
+                                    .left;
+
+                                    li {
+                                        width: 31px;
+                                        height: 30px;
+                                        .left;
+                                        margin-right: 17px;
+
+                                        &:last-child {margin-right: 0;}
+
+                                        a {
+                                            width: 100%;
+                                            height: 100%;
+                                            .left;
+                                            background: url(../img/icon/bandeiras-bancos.png) 0 0 no-repeat;
+                                            .hide-text;
+
+                                            &.banco-itau {background-position: 0 0;}
+                                            &.banco-bradesco {background-position: -47px 0;}
+                                            &.banco-santander {background-position: -94px 0;}
+                                        }
+
+                                    }// li
+                                
+                                }// ul
+
+                            }// .via-transferencia
+
+                        }// li
+
+                    }// ul
+
+                }// .status-pedido
+
+            }// .content
+
+            .resumo-pedido {
+                width: 100%; 
+                display: none;
+                
+
+                &.mobile {
+                    display: block; 
+                    margin-bottom: 20px;
+
+                }
+            }
+
+        }// .container
+
+        &.confirmacao {
+            .resumo-pedido {display: block;}
+        }
+
+    }// #pagamento
+
+}// @media only screen and (max-width : 767px)

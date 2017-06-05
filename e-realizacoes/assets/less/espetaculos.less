@@ -1,0 +1,232 @@
+/*
+ ************************************************************************************************************************************
+ * =ESPETÁCULOS
+ ************************************************************************************************************************************
+*/
+
+#espetaculos {
+
+    .container {
+        .respiro();
+
+        article {
+            width: 100%;
+            .left;
+            
+            .content {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+
+                .espetaculo {
+                    width: 100%;
+                    .left;
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid #ccc;
+                    margin-bottom: 40px;
+
+                    h2 {
+                        width: 100%;
+                        .rotis-serif-bold;
+                        font-size: 22px;
+                        text-transform: none;
+                    }
+                    
+                    .detalhes {
+                        width: 100%;
+                        .left;
+                        
+
+                        .dados {
+                            .calc(width, ~'60% - 30px');
+                            .left;
+                            margin-right: 30px;
+
+                            figure {
+                                width: 255px;
+                                .left;
+                                margin-right: 30px;
+                            }
+
+                            .info {
+                                width: 250px;
+                                .left;
+
+                                h3 {
+                                    .rotis-ss-std-bold;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                }
+
+                                p {margin-bottom: 10px;}
+
+                                .destaque {font-size: 16px; strong {.rotis-ss-std-bold;}}
+
+                            }// .info
+
+                        }// .dados
+
+                        .video {
+                            .calc(width, ~'40% - 30px');
+                            .left;
+                        
+                        }// .video
+
+                    }// .detalhes
+
+                }// .espetaculo
+
+            }// .content
+
+        }// article
+        
+    }// .container
+
+}// #espetaculos
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =ESPETÁCULOS
+     ************************************************************************************************************************************
+    */
+
+    #espetaculos {
+
+        .container {
+            width: 100%;
+            .respiro(40px, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+                .left;
+                
+                .content {
+                    
+                    .espetaculo {
+                        
+                        .detalhes {
+                            
+                            .dados {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 30px;
+
+                                .info {.calc(width, ~'80% - 255px');}
+
+                            }// .dados
+
+                            .video {
+                                width: 80%;
+                                float: none;
+                                margin: 0 auto;
+                                text-align: center;
+
+                                iframe {
+                                    width: 80% !important;
+                                    height: 300px !important;
+                                }
+                            
+                            }// .video
+
+                        }// .detalhes
+
+                    }// .espetaculo
+
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #espetaculos
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =ESPETÁCULOS
+     ************************************************************************************************************************************
+    */
+
+    #espetaculos {
+
+        .container {
+            width: 100%;
+            .respiro(20px, 20px, 26px, 26px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+                .left;
+                
+                .content {
+
+                    .espetaculo {
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+
+                        h2 {font-size: 16px; .rotis-ss-std;}
+                        
+                        .detalhes {
+                            
+                            .dados {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 30px;
+
+                                figure {
+                                    width: 100%;
+                                    height: auto;
+                                    margin-bottom: 20px;
+                                    
+                                    img {width: 100%; height: auto;}
+                                }
+
+                                .info {width: 100%;}
+
+                            }// .dados
+
+                            .video {
+                                width: 100%;
+                                float: none;
+                                margin: 0 auto;
+                                text-align: center;
+
+                                iframe {
+                                    width: 100% !important;
+                                    height: auto !important;
+                                }
+                            
+                            }// .video
+
+                        }// .detalhes
+
+                    }// .espetaculo
+
+                }// .content
+
+            }// article
+            
+        }// .container
+
+    }// #espetaculos
+
+}// @media only screen and (max-width : 767px)

@@ -1,0 +1,480 @@
+/*
+ ************************************************************************************************************************************
+ * =AUTORES
+ ************************************************************************************************************************************
+*/
+
+#autores {
+    
+    .container {
+        
+        header {margin-top: 40px;}
+
+        .selecione {display: none;}
+
+        article {
+            width: 100%;
+            float: left;
+            margin-bottom: 60px;
+
+            .lista-alfabetica {
+                width: 100%;
+                .left;
+                margin-bottom: 40px;
+
+                li {
+                    .size(26);
+                    .univers-std-lt-ultra;
+                    .upper;
+                    .left;
+                    font-size: 20.5px;
+                    text-align: center;
+                    margin-left: 17px;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        line-height: 26px;
+                        .round(50%);
+                        .cinza-escuro;
+                        .trans();
+                        display: block;
+
+                        &:hover, &.active {
+                            .trans();
+                            .bg-verde;
+                            .branco;
+                        }// :hover e active
+
+                    }// a
+
+                    &:first-child {margin-left: 0;}
+                }
+                
+
+            }// .lista-alfabetica
+
+            .lista-autores {
+                width: 100%;
+                .left;
+
+                li {
+                    width: 160px;
+                    min-height: 280px;
+                    .left;
+                    margin-right: 30px;
+                    .rotis-ss-std-bold;
+                    font-size: 18px;
+                    .upper;
+                    text-align: center;
+                    .box-sizing(border-box);
+                    margin-bottom: 20px;
+                    
+                    &:nth-child(6n+6) {margin-right: 0;}
+
+                    figure {
+                        width: 100%;
+                        height: 160px;
+                        .left;
+                        margin-bottom: 20px;
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            .left;
+                            overflow: hidden;
+                            .round(50%);
+                        
+                        }// a
+
+                    }// figure
+
+                    > a {line-height: 120%;}
+
+                }// li
+            
+            }// .lista-autores
+
+
+            // Interna Autor
+
+            .pag-autor {
+                width: 100%;
+                .left;
+                
+                > figure {
+                    .size(255);
+                    .round(50%);
+                    .left;
+                    overflow: hidden;
+                    margin-right: 30px;
+
+                }// > figure
+
+
+                .historia {
+                    width: 350px;
+                    .left;
+                    margin-right: 30px;
+
+                    p {line-height: 120%; margin-bottom: 15px;}
+
+                }// .historia
+
+                .obras {
+                    width: 443px;
+                    .left;
+                    
+                    h2 {text-transform: none; font-size: 25px;}
+
+                    .lista {
+                        width: 100%;
+                        .left;
+                        .box-sizing(border-box);
+                        .respiro(0, 0, 28px, 28px);
+                        position: relative;
+
+                        > span {
+                            width: 18px;
+                            height: 31px;
+                            position: absolute;
+                            z-index: 100;
+                            top: 50%;
+                            margin-top: -15.5px;
+                            display: block;
+                            .spt;
+                            .opacity(0.8);
+                            .trans();
+                            cursor: pointer;
+                            
+                            &:hover {.opacity(1); .trans();}
+
+                            &.prev {background-position: -62px -87px; left: 0px;}
+                            &.next {background-position: -85px -87px; right: 0px;}
+
+                        }// span
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                width: 122px;
+                                height: 270px;
+                                .left;
+                                margin-right: 10px;
+                                
+                                &:last-child {margin-right: 0;}
+
+                                figure {
+                                    width: 100%;
+                                    .left;
+                                    margin-bottom: 14px;
+
+                                }// figure
+
+                                h3 {
+                                    .rotis-ss-std-bold;
+                                    font-size: 15.23px;
+
+                                }// h3
+
+                                .autor {
+                                    font-size: 12.18px;
+                                    .rotis-ss-std-italic;
+                                    .cinza;
+
+                                }// .autor
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista
+
+                }// .obras
+
+            }// .pag-autor
+        
+        }// article
+
+    }// .container
+    
+}// #autores
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    #autores {
+        
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(0, 0, 10px, 10px);
+            .box-sizing(border-box);
+            
+            header {margin-top: 40px;}
+
+            article {
+                                
+                .lista-alfabetica {
+                    
+                    li {
+                        .size(18);
+                        margin-left: 10px;
+
+                        a {line-height: 18px;}
+
+                        &:first-child {margin-left: 0;}
+                    }
+                    
+                }// .lista-alfabetica
+
+                .lista-autores {
+                    width: 768px;
+                    
+                    li {&:nth-child(6n+6) {margin-right: 30px;} &:nth-child(4n+4) {margin-right: 0;}}
+                
+                }// .lista-autores
+
+
+                // Interna Autor
+
+                .pag-autor {
+                    width: 100%;
+                                        
+                    > figure {margin-bottom: 30px;}
+
+                    .historia {
+                        .calc(width, ~'100% - 285px');
+                        margin-right: 0;
+                                            
+                    }// .historia
+
+                    .obras {
+                        width: 650px; 
+                    
+                        .lista {ul {li {height: 240px;}}}
+
+                    }// .obras
+
+                }// .pag-autor
+            
+            }// article
+
+        }// .container
+        
+    }// #autores
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    #autores {
+
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(0, 0, 26px, 26px);
+            .box-sizing(border-box);
+
+            .selecione {
+                width: 100%;
+                .left;
+                margin-bottom: 20px;
+                display: block;
+
+                label {
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 41px;
+                    .verde;
+                
+                }// label
+
+                select {
+                    width: 80px;
+                    height: 41px;
+                    line-height: 41px;
+                    .box-sizing(border-box);
+                    border: 1px solid #ccc;
+                    text-indent: 10px;
+                    .cinza-escuro;
+                    font-size: 14px;
+                    .rotis-ss-std-bold;
+                    .placeholder(@cinza-escuro);
+                    background-color: transparent;
+                    display: inline-block;
+                }
+
+            }// .selecione
+            
+            header {margin-top: 20px; h1 {font-size: 25px;}}
+
+            article {
+                                
+                .lista-alfabetica {
+                    display: none;
+                    
+                    li {
+                        .size(18);
+                        margin-left: 10px;
+
+                        a {line-height: 18px;}
+
+                        &:first-child {margin-left: 0;}
+                    }
+                    
+                }// .lista-alfabetica
+
+                .lista-autores {
+                    width: 100%;
+                    .left;
+
+                    li {
+                        .calc(width, ~'50% - 5px');
+                        min-height: 180px;
+                        margin-right: 10px;
+                        font-size: 16px;
+                        .upper;
+                        text-align: center;
+                        .box-sizing(border-box);
+                        margin-bottom: 20px;
+                        
+                        &:nth-child(6n+6) {margin-right: 10px;}
+                        &:nth-child(4n+4) {margin-right: 10px;}
+                        &:nth-child(2n+2) {margin-right: 0;}
+
+                        figure {
+                            width: 100%;
+                            height: auto;
+                            max-width: 160px;
+                            max-height: 160px;
+                            float: none;
+                            margin: 0 auto 20px;
+                            
+                            a {
+                                width: 100%;
+                                height: 100%;
+                                float: none;
+                                display: block;
+                                overflow: hidden;
+                                .round(50%);
+                            
+                            }// a
+
+                        }// figure
+
+                        > a {line-height: 120%;}
+
+                    }// li
+                }
+
+
+                // Interna Autor
+
+                .pag-autor {
+                    width: 100%;
+                                        
+                    > figure {
+                        float: none;
+                        margin: 0 auto 20px;
+                    }
+
+                    .historia {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                                            
+                    }// .historia
+
+                    .obras {
+                        width: 100%;
+                        height: auto;
+                        .left;
+                        
+                        h2 {text-transform: none; font-size: 25px;}
+
+                        .lista {
+                            width: 100%;
+                            height: 230px;
+                            .left;
+                            .box-sizing(border-box);
+                            .respiro(0, 0, 28px, 28px);
+                            position: relative;
+
+                            > span {
+                                width: 18px;
+                                height: 31px;
+                                position: absolute;
+                                z-index: 100;
+                                top: 50%;
+                                margin-top: -15.5px;
+                                display: block;
+                                .spt;
+                                .opacity(0.8);
+                                .trans();
+                                cursor: pointer;
+                                
+                                &:hover {.opacity(1); .trans();}
+
+                                &.prev {background-position: -62px -87px; left: 0px;}
+                                &.next {background-position: -85px -87px; right: 0px;}
+
+                            }// span
+
+                            ul {
+                                width: 100%;
+                                float: none;
+                                margin: 0 auto;
+
+                                li {
+                                    width: 90%;
+                                    margin-right: 0;
+                                        
+                                    margin-bottom: 38px;
+
+                                    figure {margin-bottom: 10px;}
+
+                                    .info {height: auto;}
+
+                                    h3 {font-size: 15.23px;}
+
+                                    p {width: 100%;}
+
+                                    .autor {.rotis-ss-std-italic; font-size: 12.18px;}
+                                    .preco-anterior {display: none}
+                                    .preco-atual {display: none;}
+
+                                }// li
+
+                            }// ul
+
+                        }// .lista
+
+                    }// .obras
+
+                }// .pag-autor
+            
+            }// article
+
+        }// .container
+        
+    }// #autores
+
+}// @media only screen and (max-width : 767px)

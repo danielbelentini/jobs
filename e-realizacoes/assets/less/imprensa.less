@@ -1,0 +1,645 @@
+/*
+ ************************************************************************************************************************************
+ * =IMPRENSA
+ ************************************************************************************************************************************
+*/
+
+#imprensa {
+        
+    .container {
+        
+        header {margin-top: 40px;}
+
+        article {
+            width: 100%;
+            float: left;
+            margin-bottom: 60px;
+
+            h3 {
+                font-size: 25px;
+                .univers-std-ultra;
+                .verde;
+                margin-bottom: 30px;
+
+            }// h3
+            
+            .content {
+                width: 824px;
+                .left;
+                
+                .timeline {
+                    width: 100%;
+                    .bg-cinza-claro;
+                    .box-sizing(border-box);
+                    .respiro(20px, 20px, 0, 0);
+                    .left;
+                    margin-bottom: 40px;
+
+                    ul {
+                        width: 100%;
+
+                        li {
+                            display: inline;
+                            margin-left: 20px;
+                            .rotis-ss-std-bold;
+                        
+                        }// li
+
+                    }// ul
+
+                }// .timeline
+
+                .publicacoes {
+                    width: 100%;
+                    .left;
+
+                    .publicacao {
+                        width: 100%;
+                        .left;
+                        padding-bottom: 38px;
+                        border-bottom: 1px solid #ccc;
+                        margin-bottom: 45px;
+
+                        > figure {
+                            width: 254px;
+                            margin-right: 30px;
+                            .left;
+                        
+                        }// > figure
+
+                        .info {
+                            width: 440px;
+                            .left;
+                            
+                            .info-autor {
+                                .rotis-serif-bold;
+                                font-size: 18px;
+                                line-height: 130%;
+                                .verde;
+                                margin-bottom: 20px;
+                            
+                            }// .info-autor
+
+                            .data-materia {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 35px;
+
+                                p {
+                                    width: 238px;
+                                    float: left;
+                                    margin-bottom: 8px;
+                                    margin-top: 10px;
+
+                                }//p
+                                
+                                .disponivel-pdf {
+                                    height: 35px;
+                                    .texto(17px, @verde, 35px);
+                                    float: left;
+                                    .univers-std-ultra;
+                                    .upper;
+
+                                    &:hover {text-decoration: underline;}
+
+                                    &:after {
+                                        content: '';
+                                        width: 28px;
+                                        height: 35px;
+                                        .spt;
+                                        background-position: -124px 0;
+                                        float: right;
+                                        margin-left: 10px;
+
+                                    }// :after
+
+                                }// .disponivel-pdf
+
+                            }// .data-materia
+
+                            .obras {
+                                width: 100%;
+                                .left;
+
+                                .destaque {
+                                    .rotis-ss-std-bold;
+                                    .verde;
+                                    .upper;
+                                    margin-bottom: 20px;
+
+                                }// .destaque
+
+                                figure {
+                                    width: 95px;
+                                    .left;
+                                    margin-right: 20px;
+
+                                }// figure
+
+                                .livro {
+                                    width: 300px;
+                                    .left;
+                                    font-size: 16px;
+                                    .rotis-serif-bold;
+                                    margin-bottom: 15px;
+
+                                }// .livro
+
+                                .autor {
+                                    width: 300px;
+                                    .left;
+                                    font-size: 16px;
+                                    margin-bottom: 15px;
+
+                                    a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                }// .autor
+
+                            }// .obras
+
+                        }// .info
+
+                    }// .publicacao
+
+                }// .publicacoes
+
+            }// .content
+
+            aside {
+                width: 255px;
+                .right;
+                .bg-cinza-claro;
+                .box-sizing(border-box);
+                .respiro(20px, 20px, 20px, 20px);
+
+                ul {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    li {
+                        padding-left: 10px;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            width: 4px;
+                            height: 4px;
+                            display: block;
+                            .bg-verde;
+                            .round(50%);
+                            position: absolute;
+                            top: 6px;
+                            left: 0;
+                            z-index: 1;
+
+                        }// :before
+
+                    }// li
+                
+                }// ul
+
+                p {
+                    margin-bottom: 10px;
+
+                    a {display: block;}
+
+                    strong {display: block; .verde;}
+
+                }// p
+
+            }// aside
+            
+        
+        }// article
+
+    }// .container
+    
+}// #imprensa
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =IMPRENSA
+     ************************************************************************************************************************************
+    */
+
+    #imprensa {
+            
+        .container {
+            width: 100%;
+            .box-sizing(border-box);
+            .respiro(0, 40px, 10px, 10px);
+            
+            header {margin-top: 20px;}
+
+            article {
+                width: 100%;
+                float: left;
+                margin-bottom: 60px;
+                position: relative;
+
+                h2 {margin-top: 280px;}
+
+                h3 {
+                    font-size: 25px;
+                    .univers-std-ultra;
+                    .verde;
+                    margin-bottom: 30px;
+
+                }// h3
+                
+                .content {
+                    width: 100%;
+                    .left;
+                    
+                    .timeline {
+                        width: 100%;
+                        .bg-cinza-claro;
+                        .box-sizing(border-box);
+                        .respiro(20px, 20px, 0, 0);
+                        .left;
+                        margin-bottom: 40px;
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                display: inline;
+                                margin-left: 20px;
+                                .rotis-ss-std-bold;
+                            
+                            }// li
+
+                        }// ul
+
+                    }// .timeline
+
+                    .publicacoes {
+                        width: 100%;
+                        .left;
+
+                        .publicacao {
+                            width: 100%;
+                            .left;
+                            padding-bottom: 38px;
+                            border-bottom: 1px solid #ccc;
+                            margin-bottom: 45px;
+
+                            > figure {
+                                width: 254px;
+                                margin-right: 30px;
+                                .left;
+                            
+                            }// > figure
+
+                            .info {
+                                width: 440px;
+                                .left;
+                                
+                                .info-autor {
+                                    .rotis-serif-bold;
+                                    font-size: 18px;
+                                    line-height: 130%;
+                                    .verde;
+                                    margin-bottom: 20px;
+                                
+                                }// .info-autor
+
+                                .data-materia {
+                                    width: 100%;
+                                    .left;
+                                    margin-bottom: 35px;
+
+                                    p {
+                                        width: 238px;
+                                        float: left;
+                                        margin-bottom: 8px;
+                                        margin-top: 10px;
+
+                                    }//p
+                                    
+                                    .disponivel-pdf {
+                                        height: 35px;
+                                        .texto(17px, @verde, 35px);
+                                        float: left;
+                                        .univers-std-ultra;
+                                        .upper;
+
+                                        &:hover {text-decoration: underline;}
+
+                                        &:after {
+                                            content: '';
+                                            width: 28px;
+                                            height: 35px;
+                                            .spt;
+                                            background-position: -124px 0;
+                                            float: right;
+                                            margin-left: 10px;
+
+                                        }// :after
+
+                                    }// .disponivel-pdf
+
+                                }// .data-materia
+
+                                .obras {
+                                    width: 100%;
+                                    .left;
+
+                                    .destaque {
+                                        .rotis-ss-std-bold;
+                                        .verde;
+                                        .upper;
+                                        margin-bottom: 20px;
+
+                                    }// .destaque
+
+                                    figure {
+                                        width: 95px;
+                                        .left;
+                                        margin-right: 20px;
+
+                                    }// figure
+
+                                    .livro {
+                                        width: 300px;
+                                        .left;
+                                        font-size: 16px;
+                                        .rotis-serif-bold;
+                                        margin-bottom: 15px;
+
+                                    }// .livro
+
+                                    .autor {
+                                        width: 300px;
+                                        .left;
+                                        font-size: 16px;
+                                        margin-bottom: 15px;
+
+                                        a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                    }// .autor
+
+                                }// .obras
+
+                            }// .info
+
+                        }// .publicacao
+
+                    }// .publicacoes
+
+                }// .content
+
+                aside {
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    .left;
+                    .respiro(20px, 20px, 20px, 20px);
+
+                    ul {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        li {
+                            padding-left: 10px;
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                width: 4px;
+                                height: 4px;
+                                display: block;
+                                .bg-verde;
+                                .round(50%);
+                                position: absolute;
+                                top: 6px;
+                                left: 0;
+                                z-index: 1;
+
+                            }// :before
+
+                        }// li
+                    
+                    }// ul
+
+                    p {
+                        margin-bottom: 10px;
+
+                        a {display: block;}
+
+                        strong {display: block; .verde;}
+
+                    }// p
+
+                }// aside
+                
+            
+            }// article
+
+        }// .container
+        
+    }// #imprensa
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =IMPRENSA
+     ************************************************************************************************************************************
+    */
+
+    #imprensa {
+            
+        .container {
+            width: 100%;
+            .box-sizing(border-box);
+            .respiro(0, 40px, 26px, 26px);
+            
+            header {margin-top: 20px; h1 {font-size: 20.5px;}}
+            
+            h2 {
+                font-size: 18px; 
+                .univers-std-ultra;
+                margin-bottom: 10px;
+            }
+
+            article {
+                width: 100%;
+                float: left;
+                margin-bottom: 0;
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+
+                }// h3
+                
+                .content {
+                    width: 100%;
+                    .left;
+                    
+                    .timeline {
+                        width: 100%;
+                        .bg-cinza-claro;
+                        .box-sizing(border-box);
+                        .respiro(15px, 5px, 10px, 10px);
+                        .left;
+                        margin-bottom: 20px;
+
+                        ul {
+                            width: 100%;
+
+                            li {
+                                display: inline-block;
+                                margin-left: 0;
+                                margin-right: 10px;
+                                margin-bottom: 10px;
+                                .rotis-ss-std-bold;
+                            
+                            }// li
+
+                        }// ul
+
+                    }// .timeline
+
+                    .publicacoes {
+                        width: 100%;
+                        .left;
+
+                        .publicacao {
+                            width: 100%;
+                            .left;
+                            padding-bottom: 38px;
+                            border-bottom: 1px solid #ccc;
+                            margin-bottom: 45px;
+
+                            > figure {
+                                width: 100%;
+                                margin-right: 0;
+                                margin-bottom: 20px;
+                                .left;
+
+                                img {width: 100%; height: auto;}
+                            
+                            }// > figure
+
+                            .info {
+                                width: 100%;
+                                .left;
+                                
+                                .info-autor {font-size: 12px; margin-bottom: 10px;}
+
+                                .data-materia {
+                                    width: 100%;
+                                    .left;
+                                    margin-bottom: 15px;
+
+                                    p {
+                                        width: 100%;
+                                        float: left;
+                                        margin-bottom: 10px;
+                                        margin-top: 0;
+                                        font-size: 12px;
+
+                                    }//p
+                                    
+                                    .disponivel-pdf {
+                                        height: 35px;
+                                        .texto(17px, @verde, 35px);
+                                        .right;
+                                        .univers-std-ultra;
+                                        .upper;
+
+                                        &:hover {text-decoration: underline;}
+
+                                        &:after {
+                                            content: '';
+                                            width: 28px;
+                                            height: 35px;
+                                            .spt;
+                                            background-position: -124px 0;
+                                            float: right;
+                                            margin-left: 10px;
+
+                                        }// :after
+
+                                    }// .disponivel-pdf
+
+                                }// .data-materia
+
+                                .obras {
+                                    width: 100%;
+                                    .left;
+
+                                    .destaque {
+                                        .rotis-ss-std-bold;
+                                        .verde;
+                                        .upper;
+                                        margin-bottom: 20px;
+
+                                    }// .destaque
+
+                                    figure {
+                                        .calc(width, ~'40% - 5px');
+                                        .left;
+                                        margin-right: 10px;
+
+                                    }// figure
+
+                                    .livro {
+                                        .calc(width, ~'60% - 5px');
+                                        font-size: 16px;
+                                        margin-bottom: 15px;
+
+                                    }// .livro
+
+                                    .autor {
+                                        .calc(width, ~'60% - 5px');
+                                        font-size: 16px;
+                                        margin-bottom: 15px;
+
+                                        a {.rotis-ss-std-italic; .cinza; &:hover {.cinza-escuro;}}
+
+                                    }// .autor
+
+                                }// .obras
+
+                            }// .info
+
+                        }// .publicacao
+
+                    }// .publicacoes
+
+                }// .content
+
+                aside {width: 100%; margin-bottom: 0;}
+                
+            
+            }// article
+
+        }// .container
+        
+    }// #imprensa
+
+}// @media only screen and (max-width : 767px)

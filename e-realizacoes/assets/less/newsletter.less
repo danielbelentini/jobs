@@ -1,0 +1,268 @@
+/*
+ ************************************************************************************************************************************
+ * =Newsletter
+ ************************************************************************************************************************************
+*/
+
+#newsletter {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    input[type=text] {
+        width: 100%;
+        height: 41px;
+        line-height: 41px;
+        .box-sizing(border-box);
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        .cinza-escuro;
+        font-size: 14px;
+        .rotis-ss-std-bold;
+        .placeholder(@cinza-escuro);
+        background-color: transparent;
+        .left;
+    }
+
+    .container {
+        
+        header {margin-top: 40px;}
+
+        article {
+            width: 100%;
+            float: left;
+
+            form {
+                width: 100%;
+                .left;
+
+                fieldset {
+
+                    > div {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 40px;
+
+                        p {
+                            width: 33.3%;
+                            .left;
+                            clear: both;
+
+
+                            &.telefone {
+
+                                input {
+
+                                    &:first-child {width: 18.47%;}
+                                    &:last-child {width: 73.01%; .right;}
+                                
+                                }// input
+
+                            }// .telefone
+
+                        }// p
+
+                        &.preferencias-news {
+                            width: 100%;
+                            .left;
+                            
+                            .dados-cliente {
+                                width: 100%;
+                                .left;
+                                margin-bottom: 18px;
+                                
+                                p {
+                                    width: 100%;
+                                    margin-bottom: 5px;
+
+                                    small {width: 97px; .left;}
+
+                                    strong {.rotis-ss-std-bold;}
+
+                                }// p
+
+                            }// .dados-cliente
+
+                        }// .preferencias-news
+
+                        &.assuntos-interesse {
+                           
+                            ul {
+                                width: 50%;
+                                .left;
+                                margin-bottom: 18px;
+                                
+                                li {
+                                    .calc(width, ~'50% - 20px');
+                                    .left;
+                                    margin-right: 20px;
+                                    margin-bottom: 10px;
+                                    
+                                    &:nth-child(2n+2) {margin-right: 0;}
+
+                                    input[type=checkbox] {
+                                        display:inline-block; 
+                                        vertical-align: middle;
+                                        margin-right: 8px;
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+
+                                }// li
+
+                            }// ul
+
+                            input[type=submit] {
+                                width: 160px;
+                                .left;
+                                clear: both;
+                                .btn;
+                                .branco;
+                                .bg-laranja;
+                                border: 0;
+                                .trans();
+                                cursor: pointer;
+
+                                &:hover {.trans(); .bg-darken(@laranja);}
+
+                            }// input[type=submit]
+
+                        }// .assuntos-interesses
+
+                    }// > div
+
+                }// fieldset
+
+            }// form
+
+            .msg-sucesso {
+                min-height: 400px;
+                display: none;
+                
+                p {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 130%;
+
+                    strong {font-size: 18px; .verde;}
+                
+                }// p
+
+            }// .msg-suceso
+
+        }// article
+
+    }// .container
+
+}// #newsletter
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =Newsletter
+     ************************************************************************************************************************************
+    */
+
+    #newsletter {
+        
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+                
+                form {
+                    
+                    fieldset {
+
+                        > div {
+                            
+                            p {width: 50%;}
+
+                            &.assuntos-interesse {ul {width: 80%;}}
+
+                        }// > div
+
+                    }// fieldset
+
+                }// form
+                
+            }// article
+
+        }// .container
+
+    }// #newsletter
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =Newsletter
+     ************************************************************************************************************************************
+    */
+
+    #newsletter {
+        
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            h1 {font-size: 25px;}
+
+            h2 {font-size: 20.5px; .univers-std-ultra;}
+
+            article {
+                
+                form {
+                    
+                    fieldset {
+
+                        > div {
+                            
+                            p {width: 100%;}
+
+                            &.assuntos-interesse {
+                                ul {
+                                    width: 100%;
+
+                                    li {width: 100%;}
+                                }
+
+                                input[type=submit] {width: 100%;}
+                            }
+
+                        }// > div
+
+                    }// fieldset
+
+                }// form
+                
+            }// article
+
+        }// .container
+
+    }// #newsletter
+
+}// @media only screen and (max-width : 767px)

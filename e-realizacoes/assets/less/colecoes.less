@@ -1,0 +1,618 @@
+/*
+ ************************************************************************************************************************************
+ * =COLEÇÕES
+ ************************************************************************************************************************************
+*/
+
+#colecoes {
+
+    .container {
+        .respiro();
+
+        article {
+            width: 100%;
+            
+            .filtros {
+                width: 160px;
+                float: left;
+                .box-sizing(border-box);
+                .bg-cinza-claro;
+                .respiro(20px, 20px, 0, 0); 
+
+                .respiro {
+                    .respiro(0, 0, 20px, 5px);
+
+                    h2 {
+                        font-size: 14px;
+                        .rotis-semi-bold;
+                        margin-bottom: 30px;
+                    }
+
+                    dl {
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 30px;
+
+                        dt {
+                            .verde;
+                            .rotis-semi-bold;
+                            margin-bottom: 15px;
+                        }
+
+                        dd {
+                            .upper;
+
+                            a {
+                                .size(12);
+                                line-height: 14px;
+                                font-size: 8.26px;
+                                display: inline-block;
+                                .branco;
+                                .bg-verde;
+                                .round(50%);
+                                .rotis-semi-bold;
+                                text-align: center;
+                                position: relative;
+                                top: -2px;
+                                margin-left: 5px;
+
+                                &:hover {.bg-darken(@verde);}
+
+                            }// a
+
+                        }// dd
+
+                    }// dl
+
+                }// .respiro
+
+                form {
+                    width: 100%;
+                    min-height: 100%;
+                    .rotis-semi-bold;
+
+                    fieldset {
+                        width: 100%;
+                        float: left;
+                        margin-bottom: 30px;
+                        
+                        legend {
+                            width: 100%;
+                            float: left;
+                            font-size: 14px;
+                            .verde;
+                            margin-bottom: 14px;
+
+                        }// legend
+
+                        label {
+                            width: 100%;
+                            float: left;
+                            margin-bottom: 10px;
+                            .cinza-beast;
+                            font-size: 13px;
+
+                            input[type=checkbox] {
+                                margin: 0;
+                                margin-right: 6px;
+                                float: left;
+                            
+                            }
+
+                            p {
+                                max-width: 112px; 
+                                float: left;
+                                letter-spacing: -0.5px;
+                            }
+
+                        }// label
+
+                        
+                        
+
+                    }// fieldset
+                
+                }// form
+
+                .sep {
+                    width: 100%;
+                    .box-sizing(border-box);
+                    float: left;
+                    border-top: 1px solid #d3d3d3;
+                    .respiro(20px, 0, 0, 0);
+                    text-align: center;
+                }
+                
+            }// .filtros
+
+            .content {
+                width: 920px;
+                float: right;
+                margin-bottom: 60px;
+
+                .colecao {
+                    .calc(width, ~'50% - 30px');
+                    .left;
+                    margin-right: 30px;
+                    margin-bottom: 30px;
+
+                    &:nth-child(2n+2) {margin-right: 0;}
+
+                    .info {
+                        .left;
+                        position: relative;
+                        margin-bottom: 30px;
+
+                        h2 {font-size: 20.5px;}
+
+                        p {
+                            width: 50%; 
+                            .rotis-semi-bold;
+                            .left;
+                        }
+
+                        .btn {
+                            width: 25%;
+                            .bg-laranja;
+                            .branco;
+                            text-align: center;
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            right: 28px;
+                            z-index: 1;
+                            .trans();
+
+                            &:hover {.trans(); .bg-darken(@laranja);}
+                        }
+
+                    }// .info
+
+                    .lista-livros {
+                        width: 100%;
+                        height: 290px;
+                        .left;
+                        .box-sizing(border-box);
+                        .respiro(0, 0, 28px, 28px);
+                        position: relative;
+
+                        > span {
+                            width: 18px;
+                            height: 31px;
+                            position: absolute;
+                            z-index: 100;
+                            top: 50%;
+                            margin-top: -15.5px;
+                            display: block;
+                            .spt;
+                            .opacity(0.8);
+                            .trans();
+                            cursor: pointer;
+                            
+                            &:hover {.opacity(1); .trans();}
+
+                            &.prev {background-position: -62px -87px; left: 0px;}
+                            &.next {background-position: -85px -87px; right: 0px;}
+
+                        }// span
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                width: 115px;
+                                margin-right: 10px;
+
+                                &:last-child {margin-right: 0;}
+
+                                margin-bottom: 38px;
+
+                                h3 {font-size: 15.23px;}
+
+                                p {width: 100%;}
+
+                                .autor {.rotis-ss-std-italic; font-size: 12.18px;}
+                                .preco-anterior {font-size: 13.71px;}
+                                .preco-atual {font-size: 18.27px;}
+
+                            }// li
+
+                        }// ul
+
+                    }// .lista-livros
+
+                }// .colecao
+
+            }// .content
+
+            .wrapper {
+                width: 100%;
+                .left;
+                margin-bottom: 60px;
+
+                .descricao-colecao {
+                    width: 100%;
+                    .left;
+                    margin-bottom: 40px;
+
+                    figure {
+                        .left;
+                        margin-right: 90px;
+                        margin-left: 60px;
+                    }
+
+                    p {
+                        width: 490px;
+                        .left;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                
+                .lista-livros {
+                    li {
+                        margin-bottom: 30px;
+                        &:nth-child(6n+6) {margin-right: 0;}
+                    }
+                }
+
+                .autores-colecao {
+                    width: 100%;
+                    .left;
+
+                    ul {
+                        width: 100%;
+                        .left;
+
+                        li {
+                            width: 160px;
+                            min-height: 280px;
+                            .left;
+                            margin-right: 30px;
+                            .futura-bold;
+                            font-size: 18px;
+                            .upper;
+                            text-align: center;
+                            .box-sizing(border-box);
+                            margin-bottom: 20px;
+                            
+                            &:nth-child(6n+6) {margin-right: 0;}
+
+                            figure {
+                                width: 100%;
+                                height: 160px;
+                                .left;
+                                margin-bottom: 20px;
+
+                                a {
+                                    width: 100%;
+                                    height: 100%;
+                                    .left;
+                                    overflow: hidden;
+                                    .round(50%);
+                                
+                                }// a
+
+                            }// figure
+
+                            > a {line-height: 120%;}
+
+                        }// li
+                    }
+                }
+                
+            }
+
+        }// article
+        
+    }// .container
+
+}// #colecoes
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+    
+    /*
+     ************************************************************************************************************************************
+     * =COLEÇÕES
+     ************************************************************************************************************************************
+    */
+
+    #colecoes {
+
+        h2 {font-size: 25px;}
+
+        .container {
+            width: 100%;
+            .respiro(40px, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+                
+                .content {
+                    width: 561px;
+                    float: left !important;
+                    margin-left: 20px;
+                    
+                    .colecao {
+                        .calc(width, ~'100% - 30px');
+                        margin-right: 0;
+                        
+                    }// .colecao
+
+                }// .content
+
+                .wrapper {
+                    width: 100%;
+                    .left;
+                    margin-bottom: 60px;
+
+                    .descricao-colecao {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 40px;
+
+                        figure {margin-right: 45px; margin-left: 0;}
+                        
+                        .info {
+                            .calc(width, ~'100% - 300px');
+                            .right;
+                            
+                            p {width: 100%; .left;}
+
+                        }// .info
+                    
+                    }// .descricao-colecao
+                    
+                    >div {
+                        width: 100%;
+                        .left;
+                    }         
+
+                    .lista-livros {
+                        width: 748px;
+                        
+                        li {
+                            margin-bottom: 30px;
+                            &:nth-child(6n+6) {margin-right: 20px;}
+                            &:nth-child(4n+4) {margin-right: 0;}
+                        }
+                    }
+
+                    .autores-colecao {
+                        width: 748px;
+
+                        ul {
+                            
+                            li {
+                            
+                                &:nth-child(6n+6) {margin-right: 20px;}
+                                &:nth-child(4n+4) {margin-right: 0;}
+
+                            }// li
+
+                        }// ul
+
+                    }// .autores-colecao
+                    
+                }// .wrapper
+
+            }// article
+            
+        }// .container
+
+    }// #colecoes
+
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+    
+    /*
+     ************************************************************************************************************************************
+     * =COLEÇÕES
+     ************************************************************************************************************************************
+    */
+
+    #colecoes {
+
+        h2 {font-size: 18px; .univers-std-ultra;}
+
+        .container {
+            width: 100%;
+            .respiro(20px, 20px, 26px, 26px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+
+                .filtros {display: none;}
+                
+                .content {
+                    width: 100%;
+                    float: left !important;
+                    margin-left: 0;
+                    
+                    .colecao {
+                        width: 100%;
+                        .left;
+                        margin-right: 0;
+                        margin-bottom: 15px;
+
+                        &:nth-child(2n+2) {margin-right: 0;}
+
+                        .info {
+                            width: 100%;
+                            .left;
+                            position: relative;
+                            margin-bottom: 30px;
+
+                            p {
+                                width: 100%; 
+                                .left;
+                                margin-bottom: 20px;
+                            }
+
+                            .btn {
+                                width: 100%;
+                                .bg-laranja;
+                                .branco;
+                                text-align: center;
+                                display: block;
+                                position: static;
+                                .left;
+
+                                &:hover {.trans(); .bg-darken(@laranja);}
+                            }
+
+                        }// .info
+
+                        .lista-livros {
+                            .respiro(0, 0, 0, 0);
+                            height: 250px;
+
+                            ul {
+                                width: 85%;
+                                padding-left: 26px;
+
+                                li {
+                                    width: 90%;
+                                    margin-right: 0;
+                                        
+                                    margin-bottom: 38px;
+
+                                    figure {margin-bottom: 10px;}
+
+                                    .info {height: auto;}
+
+                                    h3 {font-size: 15.23px;}
+
+                                    p {width: 100%;}
+
+                                    .autor {.rotis-ss-std-italic; font-size: 12.18px;}
+                                    .preco-anterior {display: none}
+                                    .preco-atual {display: none;}
+
+                                }// li
+
+                            }// ul
+
+                        }// .lista-livros
+
+                    }// .colecao
+
+                }// .content
+
+                .wrapper {
+                    width: 100%;
+                    .left;
+                    margin-bottom: 60px;
+
+                    .descricao-colecao {
+                        width: 100%;
+                        .left;
+                        margin-bottom: 10px;
+
+                        figure {
+                            .size(50%);
+                            margin-right: 0; 
+                            margin-left: 0;
+                            margin-bottom: 20px;
+                        }
+                        
+                        .info {
+                            width: 100%;
+                            .left;
+                            
+                            p {width: 100%; .left;}
+
+                        }// .info
+                    
+                    }// .descricao-colecao
+                    
+                    >div {
+                        width: 100%;
+                        .left;
+                    }         
+
+                    .lista-livros {
+                       width: 100%;
+                        
+                        li {
+                            margin-bottom: 30px;
+                            &:nth-child(6n+6) {margin-right: 10px;}
+                            &:nth-child(4n+4) {margin-right: 10px;}
+                            &:nth-child(2n+2) {margin-right: 0;}
+                        }
+                    }
+
+                    .autores-colecao {
+                        width: 100%;
+                        .left;
+
+                        ul {
+                            width: 100%;
+                            .left;
+
+                            li {
+                                .calc(width, ~'50% - 5px');
+                                min-height: 180px;
+                                margin-right: 10px;
+                                font-size: 16px;
+                                .upper;
+                                text-align: center;
+                                .box-sizing(border-box);
+                                margin-bottom: 20px;
+                                
+                                &:nth-child(6n+6) {margin-right: 10px;}
+                                &:nth-child(4n+4) {margin-right: 10px;}
+                                &:nth-child(2n+2) {margin-right: 0;}
+
+                                figure {
+                                    width: 100%;
+                                    height: auto;
+                                    max-width: 160px;
+                                    max-height: 160px;
+                                    float: none;
+                                    margin: 0 auto 20px;
+                                    
+                                    a {
+                                        width: 100%;
+                                        height: 100%;
+                                        float: none;
+                                        display: block;
+                                        overflow: hidden;
+                                        .round(50%);
+                                    
+                                    }// a
+
+                                }// figure
+
+                                > a {line-height: 120%;}
+
+                            }// li
+                        }
+                    }
+                    
+                }// .wrapper
+
+            }// article
+            
+        }// .container
+
+    }// #colecoes
+
+}// @media only screen and (max-width : 767px)

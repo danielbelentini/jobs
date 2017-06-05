@@ -1,0 +1,470 @@
+/*
+ ************************************************************************************************************************************
+ * =FALE CONOSCO  : Solicitação de Títulos, Professor Comentários
+ ************************************************************************************************************************************
+*/
+
+#fale-conosco {
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    h2 {
+        font-size: 25px; 
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dfdfdf;
+        margin-bottom: 30px;
+    
+    }// h2
+
+    input[type=text], 
+    input[type=password],
+    textarea {
+        width: 100%;
+        height: 41px;
+        line-height: 41px;
+        .box-sizing(border-box);
+        border: 1px solid #ccc;
+        padding-left: 10px;
+        .cinza-escuro;
+        font-size: 14px;
+        .rotis-ss-std-bold;
+        .placeholder(@cinza-escuro);
+        background-color: transparent;
+        .left;
+    }
+
+    textarea {
+        height: 141px; 
+        line-height: 120%;
+        padding-top: 10px;
+        resize: none;
+    }
+    
+    .container {
+        
+        header {margin-top: 40px;}
+
+        article {
+            width: 100%;
+            float: left;
+
+            .envio-mensagem {
+                .calc(width, ~'66.66% - 30px');
+                .left;
+
+                p {
+                    width: 50%;
+                    .left;
+                    clear: both;
+                    margin-bottom: 18px;
+
+                    &.telefone {
+
+                        input {
+
+                            &:first-child {width: 18.47%;}
+                            &:last-child {width: 73.01%; .right;}
+                        
+                        }// input
+
+                    }// .telefone
+                
+                }// p
+                
+                .solicitacao {
+                    width: 50%;
+                    .left;
+                    clear: both;
+                    margin-bottom: 18px;
+
+                    big {
+                        width: 126px;
+                        .left;
+                        .rotis-ss-std-bold;
+                        .verde;
+
+                    }// big
+
+                    .tipo {
+                        width: 225px;
+                        .left;
+
+                        label {
+                            width: 100%;
+                            .left;
+                            margin-bottom: 18px;
+
+                            input[type=radio] {
+                                margin: 0;
+                                margin-right: 10px;
+                                display: inline-block;
+                                vertical-align: middle;
+                            
+                            }// input radio
+
+                            span {
+                                width: 195px;
+                                .rotis-ss-std-bold;
+                                display: inline-block;
+                                vertical-align: top;
+                            }
+
+                        }// label
+
+                    }// .tipo
+
+                }// .solicitacao
+
+                input[type=submit] {
+                    .respiro(0, 0, 74px, 36px);
+                    .btn;
+                    background: url(../img/icon/mail.png) 35px 10px no-repeat;
+                    .branco;
+                    .bg-laranja;
+                    border: 0;
+                    cursor: pointer;
+                    .trans();
+
+                    &:hover {.trans(); .bg-darken(@laranja);}
+
+                }// input[type=submit]
+
+            }// .envio-mensagem
+
+            .telefone {
+                width: 33.33%;
+                .right;
+
+                p {
+                    width: 100%;
+                    font-size: 16px;
+                    .box-sizing(border-box);
+                    .left;
+                    padding-left: 31px;
+                    position: relative;
+                    
+                    &:before {
+                        content: '';
+                        width: 23px;
+                        height: 23px;
+                        .spt;
+                        background-position: 0 -87px;
+                        display: inline-block;
+                        position: absolute;
+                        top: -2px;
+                        left: 0;
+                        z-index: 1;
+
+                    }// :before
+
+                }// p
+
+            }// .telefone
+            
+            
+            .msg-sucesso {
+                min-height: 400px;
+                display: none;
+                
+                p {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 130%;
+
+                    strong {font-size: 18px; .verde;}
+                
+                }// p
+
+            }// .msg-suceso
+
+        }// article
+
+    }// .container
+
+}// #fale-conosco
+
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media tablet
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 1139px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =FALE CONOSCO  : Solicitação de Títulos, Professor Comentários
+     ************************************************************************************************************************************
+    */
+
+    #fale-conosco {
+                
+        .container {
+            width: 100%;
+            .respiro(0, 40px, 10px, 10px);
+            .box-sizing(border-box);
+
+            article {
+                width: 100%;
+                float: left;
+
+                .envio-mensagem {
+                    .calc(width, ~'66.66% - 30px');
+                    .left;
+
+                    p {
+                        width: 100%;
+                        .left;
+                        clear: both;
+                        margin-bottom: 18px;
+
+                        &.telefone {
+
+                            input {
+
+                                &:first-child {width: 18.47%;}
+                                &:last-child {width: 73.01%; .right;}
+                            
+                            }// input
+
+                        }// .telefone
+                    
+                    }// p
+                    
+                    .solicitacao {
+                        width: 100%;
+                        
+                        big {width: 80%; margin-bottom: 15px;}
+
+                        .tipo {
+                            width: 100%;
+                            
+                            label {span {width: 80%;}}
+
+                        }// .tipo
+
+                    }// .solicitacao
+
+                    input[type=submit] {
+                        .respiro(0, 0, 74px, 36px);
+                        .btn;
+                        background: url(../img/icon/mail.png) 35px 10px no-repeat;
+                        .branco;
+                        .bg-laranja;
+                        border: 0;
+                        cursor: pointer;
+                        .trans();
+
+                        &:hover {.trans(); .bg-darken(@laranja);}
+
+                    }// input[type=submit]
+
+                }// .envio-mensagem
+
+                .telefone {
+                    width: 33.33%;
+                    .right;
+
+                    p {
+                        width: 100%;
+                        font-size: 16px;
+                        .box-sizing(border-box);
+                        .left;
+                        padding-left: 31px;
+                        position: relative;
+                        
+                        &:before {
+                            content: '';
+                            width: 23px;
+                            height: 23px;
+                            .spt;
+                            background-position: 0 -87px;
+                            display: inline-block;
+                            position: absolute;
+                            top: -2px;
+                            left: 0;
+                            z-index: 1;
+
+                        }// :before
+
+                    }// p
+
+                }// .telefone
+                
+                
+                .msg-sucesso {
+                    min-height: 400px;
+                    display: none;
+                    
+                    p {
+                        display: block;
+                        font-size: 16px;
+                        line-height: 130%;
+
+                        strong {font-size: 18px; .verde;}
+                    
+                    }// p
+
+                }// .msg-suceso
+
+            }// article
+
+        }// .container
+
+    }// #fale-conosco
+    
+}// @media only screen and (max-width : 1139px)
+
+
+/*
+ ************************************************************************************************************************************
+ * =@media mobile
+ ************************************************************************************************************************************
+*/
+
+@media only screen and (max-width : 767px) {
+
+    /*
+     ************************************************************************************************************************************
+     * =FALE CONOSCO  : Solicitação de Títulos, Professor Comentários
+     ************************************************************************************************************************************
+    */
+
+    #fale-conosco {
+                
+        .container {
+            width: 100%;
+            .respiro(0, 20px, 26px, 26px);
+            .box-sizing(border-box);
+
+            header {margin-top: 20px; h1 {font-size: 25px;}}
+
+            h2 {
+                .univers-std-ultra; 
+                font-size: 20.5px;
+                padding-bottom: 0;
+                border-bottom: none;
+                margin-bottom: 20px;
+            }
+
+            article {
+                width: 100%;
+                float: left;
+
+                .envio-mensagem {
+                    width: 100%;
+                    .left;
+
+                    p {
+                        width: 100%;
+                        .left;
+                        clear: both;
+                        margin-bottom: 18px;
+
+                        &.telefone {
+
+                            input {
+
+                                &:first-child {width: 18.47%;}
+                                &:last-child {width: 73.01%; .right;}
+                            
+                            }// input
+
+                        }// .telefone
+                    
+                    }// p
+                    
+                    .solicitacao {
+                        width: 100%;
+                        
+                        big {width: 80%; margin-bottom: 15px;}
+
+                        .tipo {
+                            width: 100%;
+                            
+                            label {span {width: 80%;}}
+
+                        }// .tipo
+
+                    }// .solicitacao
+
+                    input[type=submit] {
+                        .respiro(0, 0, 74px, 36px);
+                        .btn;
+                        background: url(../img/icon/mail.png) 35px 10px no-repeat;
+                        .branco;
+                        .bg-laranja;
+                        border: 0;
+                        cursor: pointer;
+                        .trans();
+
+                        &:hover {.trans(); .bg-darken(@laranja);}
+
+                    }// input[type=submit]
+
+                }// .envio-mensagem
+
+                .telefone {
+                    width: 100%;
+                    display: none;
+                    .left;
+
+                    &.mobile {
+                        .box-sizing(border-box);
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #dfdfdf;
+                        margin-bottom: 20px;
+                        display: block;
+                    }
+
+                    p {
+                        width: 100%;
+                        font-size: 16px;
+                        .box-sizing(border-box);
+                        .left;
+                        padding-left: 31px;
+                        position: relative;
+                        
+                        &:before {
+                            content: '';
+                            width: 23px;
+                            height: 23px;
+                            .spt;
+                            background-position: 0 -87px;
+                            display: inline-block;
+                            position: absolute;
+                            top: -2px;
+                            left: 0;
+                            z-index: 1;
+
+                        }// :before
+
+                    }// p
+
+                }// .telefone
+                
+                
+                .msg-sucesso {
+                    min-height: 400px;
+                    display: none;
+                    
+                    p {
+                        display: block;
+                        font-size: 16px;
+                        line-height: 130%;
+
+                        strong {font-size: 18px; .verde;}
+                    
+                    }// p
+
+                }// .msg-suceso
+
+            }// article
+
+        }// .container
+
+    }// #fale-conosco
+    
+}// @media only screen and (max-width : 767px)
